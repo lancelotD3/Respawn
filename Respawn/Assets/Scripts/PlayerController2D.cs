@@ -45,6 +45,7 @@ public class PlayerController2D : MonoBehaviour
     protected bool isSwiping = false;
     public bool rightSwipe = false;
     protected float swipeCooldown = 0.5f;
+    public bool wantLock = false;
 
     void Start()
     {
@@ -159,9 +160,10 @@ public class PlayerController2D : MonoBehaviour
         inputVelocity.Normalize();
     }
 
-    public void EnableController(bool enable)
+    public void EnableController(bool enable, bool wanted = false)
     {
         enabled = enable;
+        wantLock = wanted;
     }
 
     public void Stun(float stunTime)
@@ -183,7 +185,7 @@ public class PlayerController2D : MonoBehaviour
 
     public Vector2 GetVelocity() => rb.velocity;
 
-    public bool IsStun() => !enabled;
+    public bool IsStun() => !enabled && !wantLock;
 
     public void SetIsCarrying(bool value) => isCarrying = value;
     public bool GetIsCarrying() => isCarrying;
