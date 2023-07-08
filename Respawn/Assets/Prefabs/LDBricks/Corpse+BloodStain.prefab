@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4556165543474475144, guid: 605272c3227d94345a85b47802e77df5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.043
       objectReference: {fileID: 0}
     - target: {fileID: 4556165543474475144, guid: 605272c3227d94345a85b47802e77df5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8703340784586231509, guid: 605272c3227d94345a85b47802e77df5, type: 3}
+      propertyPath: bloodStain
+      value: 
+      objectReference: {fileID: 3842493525841845178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 605272c3227d94345a85b47802e77df5, type: 3}
 --- !u!4 &4566153904694184035 stripped

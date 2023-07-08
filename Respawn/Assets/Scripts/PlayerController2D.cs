@@ -41,6 +41,12 @@ public class PlayerController2D : MonoBehaviour
     protected Vector2 inputVelocity;
     protected bool bIsGrounded = false;
 
+    protected bool isCarrying = false;
+    protected bool isSwiping = false;
+    public bool rightSwipe = false;
+    protected float swipeCooldown = 0.5f;
+    public bool wantLock = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,6 +67,16 @@ public class PlayerController2D : MonoBehaviour
 
         if (inputVelocity.sqrMagnitude > 0f)
             lastInputVelocity = inputVelocity.normalized;
+
+        if(isSwiping)
+        {
+            swipeCooldown -= Time.deltaTime;
+            if(swipeCooldown < 0)
+            {
+                isSwiping = false;
+                rightSwipe = false;
+            }
+        }
     }
 
     private Vector2 lastVelocity;
@@ -144,9 +160,10 @@ public class PlayerController2D : MonoBehaviour
         inputVelocity.Normalize();
     }
 
-    public void EnableController(bool enable)
+    public void EnableController(bool enable, bool wanted = false)
     {
         enabled = enable;
+        wantLock = wanted;
     }
 
     public void Stun(float stunTime)
@@ -159,4 +176,20 @@ public class PlayerController2D : MonoBehaviour
         yield return new WaitForSeconds(stunTime);
         EnableController(true);
     }
+
+    public void StartSwipe()
+    {
+        isSwiping = true;
+        swipeCooldown = .5f;
+    }
+
+    public Vector2 GetVelocity() => rb.velocity;
+
+    public bool IsStun() => !enabled && !wantLock;
+
+    public void SetIsCarrying(bool value) => isCarrying = value;
+    public bool GetIsCarrying() => isCarrying;
+    public bool GetIsGrounded() => bIsGrounded;
+    public bool GetIsSwiping() => isSwiping;
+    public bool GetRightSwipe() => rightSwipe;
 }

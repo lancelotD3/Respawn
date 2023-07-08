@@ -12,6 +12,7 @@ public class MainWheel : MonoBehaviour
 
     public void OpenSwordWheel()
     {
+        Debug.Log("ouais");
         CloseAllWheel();
         SwordWheel.SetActive(true);
     }
