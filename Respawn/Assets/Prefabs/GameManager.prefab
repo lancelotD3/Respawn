@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8412867021899009179}
   - component: {fileID: 6732497072168604204}
   m_Layer: 0
-  m_Name: InGameManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ListTickets: {fileID: 8847859812836416832}
+  ticketListPanel: {fileID: 8847859812836416832}
   DefaultTicket: {fileID: 933555938368956303, guid: 9a6c2e9297404b34a958491d3d78a08d, type: 3}
 --- !u!1 &3582163890393804119
 GameObject:
@@ -268,8 +268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 245, y: 108.71527}
-  m_SizeDelta: {x: -590.0534, y: -324.8516}
+  m_AnchoredPosition: {x: 432, y: 0}
+  m_SizeDelta: {x: -1056, y: -216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3356622419984710977
 CanvasRenderer:

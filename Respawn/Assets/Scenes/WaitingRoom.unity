@@ -455,7 +455,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 445453484603431147, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
       propertyPath: m_Name
-      value: InGameManager
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8412867021899009179, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
       propertyPath: m_RootOrder
@@ -690,7 +690,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1812369908}
-        m_TargetAssemblyTypeName: NextLevelButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
@@ -748,6 +748,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812369903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9627f26e92120794fa723e09ef075872, type: 3}
+  m_Script: {fileID: 11500000, guid: 3090e20a559eff0458c31f5141c608ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

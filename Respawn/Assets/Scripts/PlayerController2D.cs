@@ -52,6 +52,7 @@ public class PlayerController2D : MonoBehaviour
         playerCollider = GetComponent<CapsuleCollider2D>();
         // raycasts will ignore already colliding objects
         Physics2D.queriesStartInColliders = false;
+        Physics2D.queriesHitTriggers = false;
     }
 
     [HideInInspector]

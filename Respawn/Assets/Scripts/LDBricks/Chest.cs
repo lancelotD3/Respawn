@@ -64,6 +64,7 @@ public class Chest : LDBrick
     public int select = 0;
     private void Update()
     {
+        bFinished = digit0 == 0 && digit1 == 0 && digit2 == 0 && digit3 == 0;
         if (!bCanInteract)
             return;
 
