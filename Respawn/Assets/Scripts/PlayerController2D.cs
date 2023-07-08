@@ -55,6 +55,9 @@ public class PlayerController2D : MonoBehaviour
 
         JumpHandle();
         HorizontalMovementHandle();
+
+        Debug.Log("bIsGrounded : " + bIsGrounded);
+        Debug.Log("bHasJumped : " + bHasJumped);
     }
 
     private Vector2 lastVelocity;
@@ -82,12 +85,24 @@ public class PlayerController2D : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rb.velocity = new Vector2(-collision.relativeVelocity.x, 0f).normalized * lastVelocity.magnitude;
+        rb.velocity = new Vector2(-collision.relativeVelocity.x, 0f).normalized * Mathf.Abs(lastVelocity.x);
     }
 
+    private bool bHasJumped = false;
+    IEnumerator Coyote()
+    {
+        bIsGrounded = true;
+        for (int i = 0; i < 60; ++i)
+            yield return new WaitForEndOfFrame();
+        bIsGrounded = false;
+    }
     private void CheckIsGrounded()
     {
         bIsGrounded = Physics2D.CircleCast(transform.position, playerCollider.size.x, Vector2.down, groundCheckDistance);
+        if (bIsGrounded)
+            bHasJumped = false;
+        else if (!bHasJumped)
+            StartCoroutine(Coyote());
     }
 
     [SerializeField]
@@ -118,6 +133,7 @@ public class PlayerController2D : MonoBehaviour
             rb.velocity -= Vector2.Scale(Vector2.up, rb.velocity);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpQuerry = false;
+            bHasJumped = true;
         }
     }
 
