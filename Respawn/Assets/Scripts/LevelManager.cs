@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
@@ -42,9 +43,19 @@ public class LevelManager : MonoBehaviour
 
     void FinishLevel()
     {
-        GameManager.EnablePanel(true);
         GameManager.FinishLevel();
+        StartCoroutine(FadeThenLoad());
+    }
+
+    IEnumerator FadeThenLoad()
+    {
+        FadeInFadeOut.FadeIn();
+        yield return new WaitForSeconds(1f);
+        GameManager.EnablePanel(true);
         SceneManager.LoadScene("WaitingRoom");
+        FadeInFadeOut.FadeOut();
+        yield return new WaitForSeconds(1f);
+        FadeInFadeOut.Stop();
     }
 
     public int CheckAdvancement()
