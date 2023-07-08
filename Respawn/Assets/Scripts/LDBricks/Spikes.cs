@@ -25,14 +25,7 @@ public class Spikes : MonoBehaviour
         pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         pc.GetComponent<Rigidbody2D>().AddForce(dir * repulsionForce, ForceMode2D.Impulse);
         pc.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Physics2D.gravity.y * pc.gravityMultiplier, ForceMode2D.Impulse);
-        StartCoroutine(Stun(pc));
+        pc.Stun(stunTime);
         Debug.Log(collision.name);
-    }
-
-    IEnumerator Stun(PlayerController2D pc)
-    {
-        pc.EnableController(false);
-        yield return new WaitForSeconds(stunTime);
-        pc.EnableController(true);
     }
 }
