@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8119070644283554765, guid: 605272c3227d94345a85b47802e77df5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 605272c3227d94345a85b47802e77df5, type: 3}
 --- !u!4 &4566153904694184035 stripped
@@ -123,12 +127,24 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2365194684758388723, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.024056058
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365194684758388723, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7875
+      value: 0.097772025
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365194684758388723, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365194684758388723, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 2365194684758388723, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 3394119892955281530, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
       propertyPath: m_RootOrder
@@ -181,6 +197,14 @@ PrefabInstance:
     - target: {fileID: 3394119892955281530, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269927114080151219, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ed8dab2c6fc39f47ba6fca519658f18, type: 3}
+    - target: {fileID: 6269927114080151219, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7718980758018525580, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
       propertyPath: m_Name
