@@ -34,7 +34,6 @@ public class InGameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Levels.Count);
         if (Levels.Count > 0)
         {
             foreach(Level l in Levels)
@@ -43,7 +42,7 @@ public class InGameManager : MonoBehaviour
                 //Debug.Log(l.time);
                 if (l.time <= 0)
                 {
-                    Debug.Log("ta perdu gros looser");
+                    Debug.Log("t'as perdu gros looser");
                     ResetManager();
                     SceneManager.LoadScene("MainMenu");
                 }

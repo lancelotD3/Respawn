@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - name: LevelTest
+  - name: DrodroTest
     map: {fileID: 0}
-    time: 10
+    time: 15
 --- !u!4 &257154610
 Transform:
   m_ObjectHideFlags: 0

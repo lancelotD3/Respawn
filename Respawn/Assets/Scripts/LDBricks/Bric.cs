@@ -1,7 +1,8 @@
 using UnityEditor;
 using UnityEngine;
+using System.Collections;
 
-public enum BricState
+public enum BrickState
 {
     Full,
     Broken,
@@ -12,9 +13,16 @@ public enum BricState
 [RequireComponent(typeof(CircleCollider2D))]
 public class Bric : LDBrick
 {
+    bool canUseBlocks = true;
+
     BoxCollider2D boxCollider;
     bool canInteract = false;
-    public BricState bricState = BricState.Full;
+    public BrickState brickState = BrickState.Full;
+
+    public GameObject TopBrick;
+    public GameObject BottomBrick;
+
+    public BrickState wantedBrickState = BrickState.Full;
 
     private void Awake()
     {
@@ -32,7 +40,7 @@ public class Bric : LDBrick
     {
         if (collision.tag == "Player")
         {
-            canInteract = true;
+            canInteract = false;
         }
     }
 
@@ -40,35 +48,81 @@ public class Bric : LDBrick
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if(bricState == BricState.Empty)
+            if(brickState == BrickState.Empty)
             {
-                SetState(BricState.Full);
+                SetState(BrickState.Full);
             }
         }
     }
 
-    public void SetState(BricState state)
+    private void FixedUpdate()
     {
-        bricState = state;
+        RaycastHit2D TopHit = Physics2D.Raycast(BottomBrick.transform.position, Vector2.up / 5);
+        Debug.DrawRay(TopBrick.transform.position, Vector2.up / 5, Color.red);
+
+        if (TopHit.collider != null)
+            if (TopHit.collider.tag == "Player" && TopHit.distance < 1.1f)
+            {
+                if (brickState == BrickState.Broken && canUseBlocks)
+                {
+                    SetState(BrickState.Full);
+                    canUseBlocks = false;
+                    StartCoroutine(DelayBrick());
+                }
+            }
+
+
+        RaycastHit2D bottomHit = Physics2D.Raycast(BottomBrick.transform.position, -Vector2.up / 5);
+        Debug.DrawRay(BottomBrick.transform.position, -Vector2.up / 5, Color.red);
+
+        if (bottomHit.collider != null)
+            if (bottomHit.collider.tag == "Player" && bottomHit.distance < .2f)
+            {
+                if (brickState == BrickState.Broken && canUseBlocks)
+                {
+                    SetState(BrickState.Empty);
+                    canUseBlocks = false;
+                    StartCoroutine(DelayBrick());
+                }
+                else if(brickState == BrickState.Full && canUseBlocks)
+                {
+                    SetState(BrickState.Broken);
+                    canUseBlocks = false;
+                    StartCoroutine(DelayBrick());
+                }
+            }
+    }
+
+    public void SetState(BrickState state)
+    {
+        brickState = state;
         Vector4 c = GetComponentInChildren<SpriteRenderer>().color;
 
-        if(bricState == BricState.Full)
+        if(brickState == BrickState.Full)
         {
             GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, 1f);
             GetComponentInChildren<BoxCollider2D>().enabled = true;
         }
-        else if(bricState == BricState.Broken)
+        else if(brickState == BrickState.Broken)
         {
             GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, .5f);
             GetComponentInChildren<BoxCollider2D>().enabled = true;
 
         }
-        else if(bricState == BricState.Empty)
+        else if(brickState == BrickState.Empty)
         {
             GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, .2f);
             GetComponentInChildren<BoxCollider2D>().enabled = false;
         }
+
+        bFinished = brickState == wantedBrickState;
     }
+    IEnumerator DelayBrick()
+    {
+        yield return new WaitForSeconds(0.25f);
+        canUseBlocks = true;
+    }
+    
 }
 
 #if UNITY_EDITOR
@@ -89,15 +143,15 @@ public class BricEditor : Editor
         EditorGUILayout.LabelField("ATTENTION, IL FAUT MODIFER N'IMPORTE QUEL TRUC POUR ENREGISTRER");
         if (GUILayout.Button("Full"))
         {
-            self.SetState(BricState.Full);
+            self.SetState(BrickState.Full);
         }
         if (GUILayout.Button("Broken"))
         {
-            self.SetState(BricState.Broken);
+            self.SetState(BrickState.Broken);
         }
         if (GUILayout.Button("Empty"))
         {
-            self.SetState(BricState.Empty);
+            self.SetState(BrickState.Empty);
         }
     }
 }

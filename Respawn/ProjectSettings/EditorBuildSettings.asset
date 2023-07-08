@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/LevelTest.unity
     guid: 300e86dcf8f883e4d96bd8a383b7dc5f
+  - enabled: 1
+    path: Assets/Scenes/DrodroTest.unity
+    guid: 4ee089759010a9444959f637c44fee62
   m_configObjects: {}
