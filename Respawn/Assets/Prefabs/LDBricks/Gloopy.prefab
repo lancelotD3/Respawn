@@ -243,6 +243,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   speed: 0.5
+  repulsionForce: 5
+  height: 3
+  stunTime: 2
 --- !u!1 &5696157106479701616
 GameObject:
   m_ObjectHideFlags: 0
