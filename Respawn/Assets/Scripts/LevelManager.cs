@@ -1,21 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class LevelManager : MonoBehaviour
 {
-    InGameManager inGameManager;
     List<LDBrick> ldBricks = new List<LDBrick>();
 
     TMP_Text advancementTMP;
     bool levelFinished = false;
     private void Awake()
     {
-        inGameManager = FindObjectOfType<InGameManager>();
         advancementTMP = GetComponentInChildren<TMP_Text>();
 
         foreach (LDBrick bricks in FindObjectsOfType<LDBrick>())
@@ -28,7 +23,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player" && levelFinished)
+        if (collision.tag == "Player" && levelFinished)
         {
             FinishLevel();
         }
@@ -36,7 +31,7 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             FinishLevel();
         }
@@ -47,14 +42,15 @@ public class LevelManager : MonoBehaviour
 
     void FinishLevel()
     {
-        InGameManager.FinishLevel();
+        GameManager.EnablePanel(true);
+        GameManager.FinishLevel();
         SceneManager.LoadScene("WaitingRoom");
     }
 
     public int CheckAdvancement()
     {
         int actualAdvancement = 0;
-        foreach(LDBrick brick in ldBricks)
+        foreach (LDBrick brick in ldBricks)
         {
             if (brick.bFinished)
                 actualAdvancement++;

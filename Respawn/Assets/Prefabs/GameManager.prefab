@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8412867021899009179}
   - component: {fileID: 6732497072168604204}
   m_Layer: 0
-  m_Name: InGameManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ListTickets: {fileID: 8847859812836416832}
+  ticketListPanel: {fileID: 8847859812836416832}
   DefaultTicket: {fileID: 933555938368956303, guid: 9a6c2e9297404b34a958491d3d78a08d, type: 3}
 --- !u!1 &3582163890393804119
 GameObject:
