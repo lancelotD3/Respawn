@@ -49,12 +49,17 @@ public class PlayerController2D : MonoBehaviour
         Physics2D.queriesStartInColliders = false;
     }
 
+    [HideInInspector]
+    public Vector2 lastInputVelocity = Vector2.zero;
     protected virtual void Update()
     {
         CheckIsGrounded();
 
         JumpHandle();
         HorizontalMovementHandle();
+
+        if (inputVelocity.sqrMagnitude > 0f)
+            lastInputVelocity = inputVelocity.normalized;
     }
 
     private Vector2 lastVelocity;

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
-public class Heal : MonoBehaviour
+public class Heal : LDBrick
 {
     private bool canInteract = false;
 
@@ -17,6 +17,8 @@ public class Heal : MonoBehaviour
     private Image image2;
     [SerializeField]
     private GameObject bigUI;
+    [SerializeField]
+    private float finishedThreshold = 0.9f;
 
     private float counter = 0f;
     // between 0f and 1f
@@ -39,6 +41,8 @@ public class Heal : MonoBehaviour
 
     private void Update()
     {
+        bFinished = value >= finishedThreshold && value <= 1f;
+
         if (!canInteract)
             return;
 
