@@ -19,7 +19,6 @@ public class Bric : LDBrick
     bool canInteract = false;
     public BrickState brickState = BrickState.Full;
 
-    public GameObject TopBrick;
     public GameObject BottomBrick;
 
     public BrickState wantedBrickState = BrickState.Full;
@@ -57,20 +56,6 @@ public class Bric : LDBrick
 
     private void FixedUpdate()
     {
-        RaycastHit2D TopHit = Physics2D.Raycast(BottomBrick.transform.position, Vector2.up / 5);
-        Debug.DrawRay(TopBrick.transform.position, Vector2.up / 5, Color.red);
-
-        if (TopHit.collider != null)
-            if (TopHit.collider.tag == "Player" && TopHit.distance < 1.1f)
-            {
-                if (brickState == BrickState.Broken && canUseBlocks)
-                {
-                    SetState(BrickState.Full);
-                    canUseBlocks = false;
-                    StartCoroutine(DelayBrick());
-                }
-            }
-
 
         RaycastHit2D bottomHit = Physics2D.Raycast(BottomBrick.transform.position, -Vector2.up / 5);
         Debug.DrawRay(BottomBrick.transform.position, -Vector2.up / 5, Color.red);
