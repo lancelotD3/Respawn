@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3574478225891133020}
   m_Layer: 0
   m_Name: PlatformerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +92,10 @@ MonoBehaviour:
   jumpForce: 5
   groundCheckDistance: 0.5
   airDragCoefficient: 0.3
+  jumpSpeedDecay: 1
+  falloffAcceleration: 1
+  maxFalloffSpeed: 5
+  gravityMultiplier: 2
 --- !u!1 &4234558177465379541
 GameObject:
   m_ObjectHideFlags: 0
