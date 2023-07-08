@@ -56,6 +56,7 @@ public class Portable : MonoBehaviour
         transform.parent = pc.transform;
 
         bPickedUp = true;
+        pc.SetIsCarrying(true);
     }
 
     [SerializeField]
@@ -75,5 +76,6 @@ public class Portable : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce((pc.lastInputVelocity.normalized +
             Vector2.up * verticalForce) * launchForce + pc.GetComponent<Rigidbody2D>().velocity,
             ForceMode2D.Impulse);
+        pc.SetIsCarrying(false);
     }
 }
