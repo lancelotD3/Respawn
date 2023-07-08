@@ -56,11 +56,14 @@ public class GameManager : MonoBehaviour
         {
             foreach (Level l in idlingLevels)
             {
-                l.time -= Time.deltaTime;
-                int timeInt = (int)l.time;
+                l.timerCounter -= Time.deltaTime;
+                int timeInt = (int)l.timerCounter;
                 l.ticket.time.text = timeInt.ToString();
+                l.ticket.loadingBar.transform.localPosition = new Vector3(-(l.timerCounter / l.timer) *
+                    l.ticket.loadingBar.rectTransform.rect.width,
+                l.ticket.loadingBar.transform.localPosition.y);
 
-                if (l.time <= 0)
+                if (l.timerCounter <= 0)
                 {
                     abort = true;
                     break;
@@ -84,13 +87,14 @@ public class GameManager : MonoBehaviour
     {
         int levelid = Random.Range(0, gm.playableLevels.Count);
         Level newLevel = new Level(gm.playableLevels[levelid]);
-        newLevel.time = timeForLevelcurve.Evaluate(timeLevel);
+        newLevel.timer = timeForLevelcurve.Evaluate(timeLevel);
+        newLevel.timerCounter = newLevel.timer;
         Debug.Log(timeForLevelcurve.Evaluate(timeLevel));
 
         GameObject newObject = Instantiate(DefaultTicket);
         Ticket newTicket = newObject.GetComponent<Ticket>();
         newTicket.nickName.text = "test";
-        newTicket.time.text = newLevel.time.ToString();
+        newTicket.time.text = newLevel.timer.ToString();
 
         newTicket.transform.parent = ticketListPanel.transform;
 

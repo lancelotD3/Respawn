@@ -11,12 +11,14 @@ public class Level
     {
         name = level.name;
         map = level.map;
-        time = level.time;
+        timer = level.timer;
+        timerCounter = timer;
     }
 
     public string name;
     public Texture map;
-    public float time;
+    public float timer;
+    public float timerCounter = -1f;
     public Ticket ticket;
 }
 
