@@ -86,16 +86,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalAxis: Horizontal
   jumpButton: Jump
-  maxMovementSpeed: 5
-  acceleration: 30
-  decay: 3
-  jumpForce: 5
-  groundCheckDistance: 0.5
-  airDragCoefficient: 0.3
-  jumpSpeedDecay: 1
-  falloffAcceleration: 1
-  maxFalloffSpeed: 5
-  gravityMultiplier: 2
+  maxMovementSpeed: 10
+  acceleration: 99
+  decay: 8
+  jumpForce: 25
+  groundCheckDistance: 0.2
+  airDragCoefficient: 0.2
+  airResistance: 49
+  falloffAcceleration: 51
+  maxFalloffSpeed: 50
+  gravityMultiplier: 1.1
+  jumpMercy: 0.1
+  adaptativeJumpSpeedThreshold: 15
 --- !u!1 &4234558177465379541
 GameObject:
   m_ObjectHideFlags: 0

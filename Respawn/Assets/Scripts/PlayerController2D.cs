@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -19,7 +20,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     protected float acceleration = 99f;
     [SerializeField]
-    protected float decay = 20f;
+    protected float decay = 8f;
     [SerializeField]
     protected float jumpForce = 25f;
 
@@ -30,9 +31,9 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     protected float airDragCoefficient = 0.2f;
     [SerializeField]
-    protected float airResistance = 0.9f;
+    protected float airResistance = 49f;
     [SerializeField]
-    protected float falloffAcceleration = 1.1f;
+    protected float falloffAcceleration = 51f;
     [SerializeField]
     protected float maxFalloffSpeed = 50f;
     public float gravityMultiplier = 1.1f;
@@ -56,22 +57,32 @@ public class PlayerController2D : MonoBehaviour
         HorizontalMovementHandle();
     }
 
+    private Vector2 lastVelocity;
     protected virtual void FixedUpdate()
     {
         float yVelocity = rb.velocity.y;
         float drag = bIsGrounded ? 1f : airDragCoefficient;
 
         // horizontal velocity
+        Vector2 v = rb.velocity;
         if (inputVelocity.sqrMagnitude > 0f)
-            rb.velocity += inputVelocity * acceleration * drag * Time.fixedDeltaTime;
+            v += inputVelocity * acceleration * drag * Time.fixedDeltaTime;
         else
-            rb.velocity -= rb.velocity * decay * drag * Time.fixedDeltaTime;
-        rb.velocity = Vector2.ClampMagnitude(new Vector2(rb.velocity.x, 0f), maxMovementSpeed);
+            v -= v * decay * drag * Time.fixedDeltaTime;
+        float vx = Mathf.Clamp(v.x, -maxMovementSpeed, maxMovementSpeed);
 
         // vertical velocity
-        yVelocity -= yVelocity >= 0f ? airResistance : falloffAcceleration;
+        yVelocity -= (yVelocity >= 0f ? airResistance : falloffAcceleration) * Time.fixedDeltaTime;
         yVelocity = Mathf.Clamp(yVelocity, -maxFalloffSpeed, Mathf.Infinity);
-        rb.velocity = new Vector2(rb.velocity.x, yVelocity);
+
+
+        rb.velocity = new Vector2(vx, yVelocity);
+        lastVelocity = rb.velocity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.velocity = new Vector2(-collision.relativeVelocity.x, 0f).normalized * lastVelocity.magnitude;
     }
 
     private void CheckIsGrounded()
@@ -79,20 +90,34 @@ public class PlayerController2D : MonoBehaviour
         bIsGrounded = Physics2D.CircleCast(transform.position, playerCollider.size.x, Vector2.down, groundCheckDistance);
     }
 
+    [SerializeField]
+    private float jumpMercy = 0.1f;
+    private bool jumpQuerry = false;
+    IEnumerator JumpMercy()
+    {
+        yield return new WaitForSeconds(jumpMercy);
+        jumpQuerry = false;
+    }
+    [SerializeField]
+    private float adaptativeJumpSpeedThreshold = 15f;
     private void JumpHandle()
     {
-        if (Input.GetButtonUp(jumpButton) && rb.velocity.y > 0f)
+        if (Input.GetButtonUp(jumpButton) && rb.velocity.y > adaptativeJumpSpeedThreshold)
         {
             rb.AddForce(Vector2.up * Physics2D.gravity.y * gravityMultiplier, ForceMode2D.Impulse);
         }
 
-        if (!bIsGrounded)
-            return;
-
         if (Input.GetButtonDown(jumpButton))
+        {
+            jumpQuerry = true;
+            StartCoroutine(JumpMercy());
+        }
+
+        if (jumpQuerry && bIsGrounded)
         {
             rb.velocity -= Vector2.Scale(Vector2.up, rb.velocity);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpQuerry = false;
         }
     }
 
