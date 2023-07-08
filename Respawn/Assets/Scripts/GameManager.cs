@@ -108,8 +108,19 @@ public class GameManager : MonoBehaviour
         if (instance.idlingLevels.Count > 0)
         {
             EnablePanel(false);
-            SceneManager.LoadScene(instance.idlingLevels[0].name);
+            instance.StartCoroutine(instance.FadeThenLoad());
         }
+    }
+
+    IEnumerator FadeThenLoad()
+    {
+        FadeInFadeOut.FadeIn();
+        yield return new WaitForSeconds(1f);
+        //FadeInFadeOut.Stop();
+        SceneManager.LoadScene(instance.idlingLevels[0].name);
+        FadeInFadeOut.FadeOut();
+        yield return new WaitForSeconds(1f);
+        FadeInFadeOut.Stop();
     }
 
     public static void EnablePanel(bool enable)
