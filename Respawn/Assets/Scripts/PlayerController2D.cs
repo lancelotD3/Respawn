@@ -15,28 +15,27 @@ public class PlayerController2D : MonoBehaviour
 
 
     [SerializeField]
-    protected float maxMovementSpeed = 5f;
+    protected float maxMovementSpeed = 10f;
     [SerializeField]
-    protected float acceleration = 30f;
+    protected float acceleration = 99f;
     [SerializeField]
-    protected float decay = 3f;
+    protected float decay = 20f;
     [SerializeField]
-    protected float jumpForce = 5f;
+    protected float jumpForce = 25f;
 
 
     [SerializeField]
-    protected float groundCheckDistance = 0.5f;
+    protected float groundCheckDistance = 0.2f;
 
     [SerializeField]
-    protected float airDragCoefficient = 0.3f;
+    protected float airDragCoefficient = 0.2f;
     [SerializeField]
-    protected float jumpSpeedDecay = 1f;
+    protected float airResistance = 0.9f;
     [SerializeField]
-    protected float falloffAcceleration = 1f;
+    protected float falloffAcceleration = 1.1f;
     [SerializeField]
-    protected float maxFalloffSpeed = 5f;
-    [SerializeField]
-    protected float gravityMultiplier = 2f;
+    protected float maxFalloffSpeed = 50f;
+    public float gravityMultiplier = 1.1f;
 
     protected Vector2 inputVelocity;
     protected bool bIsGrounded = false;
@@ -70,7 +69,7 @@ public class PlayerController2D : MonoBehaviour
         rb.velocity = Vector2.ClampMagnitude(new Vector2(rb.velocity.x, 0f), maxMovementSpeed);
 
         // vertical velocity
-        yVelocity -= yVelocity >= 0f ? jumpSpeedDecay : falloffAcceleration;
+        yVelocity -= yVelocity >= 0f ? airResistance : falloffAcceleration;
         yVelocity = Mathf.Clamp(yVelocity, -maxFalloffSpeed, Mathf.Infinity);
         rb.velocity = new Vector2(rb.velocity.x, yVelocity);
     }
@@ -82,7 +81,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void JumpHandle()
     {
-        if (Input.GetButtonUp(jumpButton))
+        if (Input.GetButtonUp(jumpButton) && rb.velocity.y > 0f)
         {
             rb.AddForce(Vector2.up * Physics2D.gravity.y * gravityMultiplier, ForceMode2D.Impulse);
         }
@@ -101,5 +100,10 @@ public class PlayerController2D : MonoBehaviour
     {
         inputVelocity = Vector2.right * Input.GetAxisRaw(horizontalAxis);
         inputVelocity.Normalize();
+    }
+
+    public void EnableController(bool enable)
+    {
+        enabled = enable;
     }
 }
