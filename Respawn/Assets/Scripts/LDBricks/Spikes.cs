@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-public class Spikes : LDBrick
+public class Spikes : MonoBehaviour
 {
     [SerializeField]
     private float repulsionForce = 10f;
