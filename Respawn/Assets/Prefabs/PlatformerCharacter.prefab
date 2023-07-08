@@ -90,12 +90,13 @@ MonoBehaviour:
   acceleration: 99
   decay: 8
   jumpForce: 25
-  groundCheckDistance: 0.2
+  groundCheckDistance: 0.1
   airDragCoefficient: 0.2
   airResistance: 49
   falloffAcceleration: 51
   maxFalloffSpeed: 50
   gravityMultiplier: 1.1
+  coyoteTime: 0.1
   jumpMercy: 0.1
   adaptativeJumpSpeedThreshold: 15
 --- !u!1 &4234558177465379541

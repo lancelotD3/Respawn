@@ -26,7 +26,7 @@ public class PlayerController2D : MonoBehaviour
 
 
     [SerializeField]
-    protected float groundCheckDistance = 0.2f;
+    protected float groundCheckDistance = 0.1f;
 
     [SerializeField]
     protected float airDragCoefficient = 0.2f;
@@ -55,9 +55,6 @@ public class PlayerController2D : MonoBehaviour
 
         JumpHandle();
         HorizontalMovementHandle();
-
-        Debug.Log("bIsGrounded : " + bIsGrounded);
-        Debug.Log("bHasJumped : " + bHasJumped);
     }
 
     private Vector2 lastVelocity;
@@ -88,21 +85,16 @@ public class PlayerController2D : MonoBehaviour
         rb.velocity = new Vector2(-collision.relativeVelocity.x, 0f).normalized * Mathf.Abs(lastVelocity.x);
     }
 
-    private bool bHasJumped = false;
-    IEnumerator Coyote()
-    {
-        bIsGrounded = true;
-        for (int i = 0; i < 60; ++i)
-            yield return new WaitForEndOfFrame();
-        bIsGrounded = false;
-    }
+    [SerializeField]
+    private float coyoteTime = 0.1f;
+    private float coyoteTimeCounter = 0f;
     private void CheckIsGrounded()
     {
         bIsGrounded = Physics2D.CircleCast(transform.position, playerCollider.size.x, Vector2.down, groundCheckDistance);
         if (bIsGrounded)
-            bHasJumped = false;
-        else if (!bHasJumped)
-            StartCoroutine(Coyote());
+            coyoteTimeCounter = coyoteTime;
+        else
+            coyoteTimeCounter -= Time.deltaTime;
     }
 
     [SerializeField]
@@ -117,9 +109,11 @@ public class PlayerController2D : MonoBehaviour
     private float adaptativeJumpSpeedThreshold = 15f;
     private void JumpHandle()
     {
-        if (Input.GetButtonUp(jumpButton) && rb.velocity.y > adaptativeJumpSpeedThreshold)
+        if (Input.GetButtonUp(jumpButton))
         {
-            rb.AddForce(Vector2.up * Physics2D.gravity.y * gravityMultiplier, ForceMode2D.Impulse);
+            coyoteTimeCounter = 0f;
+            if (rb.velocity.y > adaptativeJumpSpeedThreshold)
+                rb.AddForce(Vector2.up * Physics2D.gravity.y * gravityMultiplier, ForceMode2D.Impulse);
         }
 
         if (Input.GetButtonDown(jumpButton))
@@ -128,12 +122,11 @@ public class PlayerController2D : MonoBehaviour
             StartCoroutine(JumpMercy());
         }
 
-        if (jumpQuerry && bIsGrounded)
+        if (jumpQuerry && coyoteTimeCounter > 0f)
         {
             rb.velocity -= Vector2.Scale(Vector2.up, rb.velocity);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpQuerry = false;
-            bHasJumped = true;
         }
     }
 
