@@ -92,7 +92,7 @@ MonoBehaviour:
   jumpForce: 5
   groundCheckDistance: 0.5
   airDragCoefficient: 0.3
-  jumpSpeedDecay: 1
+  airResistance: 0.9
   falloffAcceleration: 1
   maxFalloffSpeed: 5
   gravityMultiplier: 2

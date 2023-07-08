@@ -84,6 +84,7 @@ public class PlayerController2D : MonoBehaviour
         if (Input.GetButtonUp(jumpButton) && rb.velocity.y > 0f)
         {
             rb.AddForce(Vector2.up * Physics2D.gravity.y * gravityMultiplier, ForceMode2D.Impulse);
+            
         }
 
         if (!bIsGrounded)
@@ -93,6 +94,7 @@ public class PlayerController2D : MonoBehaviour
         {
             rb.velocity -= Vector2.Scale(Vector2.up, rb.velocity);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Character/Enemy Footsteps");
         }
     }
 
