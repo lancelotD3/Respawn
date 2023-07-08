@@ -10,11 +10,11 @@ public class Portable : MonoBehaviour
 
     private void Awake()
     {
-        PhysicsMaterial2D m = new PhysicsMaterial2D();
-        m.friction = 999f;
-        GetComponent<Rigidbody2D>().sharedMaterial = m;
-        GetComponent<BoxCollider2D>().sharedMaterial = m;
-        GetComponent<CircleCollider2D>().sharedMaterial = m;
+        //PhysicsMaterial2D m = new PhysicsMaterial2D();
+        //m.friction = 999f;
+        //GetComponent<Rigidbody2D>().sharedMaterial = m;
+        //GetComponent<BoxCollider2D>().sharedMaterial = m;
+        //GetComponent<CircleCollider2D>().sharedMaterial = m;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
