@@ -38,6 +38,10 @@ public class BloodStain : LDBrick
 
         if (Input.GetKeyDown(KeyCode.E) && !bFinished)
         {
+            PlayerController2D pc = FindObjectOfType<PlayerController2D>();
+            pc.StartSwipe();
+            pc.rightSwipe = !pc.rightSwipe;
+
             --actualStain;
             sprite.color = new Vector4(sprite.color.r,
                 sprite.color.g,
