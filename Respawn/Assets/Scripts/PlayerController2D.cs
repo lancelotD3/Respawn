@@ -82,7 +82,9 @@ public class PlayerController2D : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        float yVelocity = rb.velocity.y;
         rb.velocity = new Vector2(-collision.relativeVelocity.x, 0f).normalized * Mathf.Abs(lastVelocity.x);
+        rb.velocity += Vector2.up * yVelocity;
     }
 
     [SerializeField]
