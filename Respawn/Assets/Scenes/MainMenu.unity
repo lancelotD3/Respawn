@@ -810,6 +810,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.data[0].name
+      value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.data[0].timer
+      value: 60000
+      objectReference: {fileID: 0}
     - target: {fileID: 8901814664529526468, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: m_RootOrder
       value: 2
