@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6340382518601665140, guid: 605272c3227d94345a85b47802e77df5, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 6298211344748188531}
     - target: {fileID: 7053182364923822951, guid: 605272c3227d94345a85b47802e77df5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -104,6 +108,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8703340784586231509, guid: 605272c3227d94345a85b47802e77df5, type: 3}
+      propertyPath: bloodStain
+      value: 
+      objectReference: {fileID: 3842493525841845178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 605272c3227d94345a85b47802e77df5, type: 3}
 --- !u!4 &4566153904694184035 stripped
@@ -204,3 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750dcee6fe8dca64a86cf768b2f67d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &6298211344748188531 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6269927114080151219, guid: a3c71f9ffca5ab94cbe1c53d5df45645, type: 3}
+  m_PrefabInstance: {fileID: 28425282840655296}
+  m_PrefabAsset: {fileID: 0}

@@ -7,7 +7,7 @@ public class Corpse : MonoBehaviour
     private Portable portable;
     private void Awake()
     {
-        portable = GetComponentInChildren<Portable>();
+        portable = GetComponent<Portable>();
     }
     private void Update()
     {
