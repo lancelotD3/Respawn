@@ -155,7 +155,8 @@ MonoBehaviour:
   levels:
   - name: DrodroTest
     map: {fileID: 0}
-    time: 15
+    time: 60000
+    ticket: {fileID: 0}
 --- !u!4 &257154610
 Transform:
   m_ObjectHideFlags: 0

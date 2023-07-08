@@ -18,6 +18,7 @@ public class Level
     public string name;
     public Texture map;
     public float time;
+    public Ticket ticket;
 }
 
 public class GameManager : MonoBehaviour

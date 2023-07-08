@@ -147,4 +147,15 @@ public class PlayerController2D : MonoBehaviour
     {
         enabled = enable;
     }
+
+    public void Stun(float stunTime)
+    {
+        StartCoroutine(StunCoroutine(stunTime));
+    }
+    private IEnumerator StunCoroutine(float stunTime)
+    {
+        EnableController(false);
+        yield return new WaitForSeconds(stunTime);
+        EnableController(true);
+    }
 }
