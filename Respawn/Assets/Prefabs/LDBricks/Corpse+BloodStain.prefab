@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2653870641967501592, guid: 605272c3227d94345a85b47802e77df5, type: 3}
+      propertyPath: launchForce
+      value: 2500
+      objectReference: {fileID: 0}
     - target: {fileID: 3556500079942935801, guid: 605272c3227d94345a85b47802e77df5, type: 3}
       propertyPath: m_Name
       value: Corpse
@@ -106,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8119070644283554765, guid: 605272c3227d94345a85b47802e77df5, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8703340784586231509, guid: 605272c3227d94345a85b47802e77df5, type: 3}
       propertyPath: bloodStain
