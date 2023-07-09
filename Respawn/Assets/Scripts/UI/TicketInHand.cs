@@ -7,20 +7,20 @@ public class TicketInHand : MonoBehaviour
 {
     Animator animator;
 
-    bool ticketOpen = true;
+    public bool ticketOpen = true;
     PlayerController2D playerController;
-    GameManager gm;
+    LevelManager lm;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         playerController = FindObjectOfType<PlayerController2D>();
-        gm = FindObjectOfType<GameManager>();
+        lm = FindObjectOfType<LevelManager>();
 
-        if(gm != null)
+        if(lm != null)
         {
             Image image = GetComponent<Image>();
-            image.sprite = gm.idlingLevels[0].map;
+            image.sprite = FindObjectOfType<GameManager>().idlingLevels[0].map;
         }
     }
 
@@ -32,13 +32,14 @@ public class TicketInHand : MonoBehaviour
 
             if(ticketOpen)
             {
+                animator.enabled = true;
                 animator.Play("TicketAnimation");
-                playerController.EnableController(false, true);
+                playerController?.EnableController(false, true);
             }
             else
             {
                 animator.Play("CloseTicket");
-                playerController.EnableController(true, true);
+                playerController?.EnableController(true, true);
             }
         }
     }

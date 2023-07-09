@@ -49,7 +49,9 @@ public class Bullet : MonoBehaviour
         }
         
         if (!collision.isTrigger)
+        {
             FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/bullet_touch");
             Destroy(gameObject);
+        }
     }
 }
