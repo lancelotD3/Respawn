@@ -7,6 +7,7 @@ public class Chest : LDBrick
 {
     private bool bFull = false;
     private bool bCanInteract = false;
+    bool anti_spam = false;
 
     [SerializeField]
     private string horizontalAxis = "Horizontal";
@@ -76,24 +77,32 @@ public class Chest : LDBrick
             ui.SetActive(!ui.activeSelf);
             pc.EnableController(!ui.activeSelf, true);
             pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Props/chest_open");//MARIUS
         }
 
         if (ui.activeSelf)
         {
+                
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 ui.SetActive(false);
                 pc.EnableController(true);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Props/chest_close");//MARIUS
             }
 
             if (Input.GetButtonDown(horizontalAxis))
             {
                 int d = select + (int)Input.GetAxisRaw(horizontalAxis);
                 select = (d < 0 ? 3 : d) % 4;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Mini_Jeu/slide_chest");//MARIUS
             }
 
             if (Input.GetButtonDown(verticalAxis))
             {
+
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Mini_Jeu/code_chest_click");//MARIUS
+
+                
                 switch (select)
                 {
                     case 0:
@@ -124,6 +133,7 @@ public class Chest : LDBrick
                         break;
                 }
             }
+            anti_spam = false;
         }
 
         text0.text = digit0.ToString();
