@@ -73,9 +73,6 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{2dec71e1-395c-4b8a-b778-d393c39fc78b}">
-		<relationship name="automationTracks">
-			<destination>{131bb392-06db-4840-a148-5fcdf2f36ac7}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{120571d4-0ac9-4d15-9189-30c8b525bdcf}</destination>
 		</relationship>
@@ -151,11 +148,6 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		</relationship>
 		<relationship name="mixer">
 			<destination>{7163a303-f47d-445b-9e5f-c3923153e602}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationTrack" id="{131bb392-06db-4840-a148-5fcdf2f36ac7}">
-		<relationship name="automator">
-			<destination>{1dba83fc-8a8b-4a16-b1a8-e1906aa05f82}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{bc0e0458-62d4-4f99-a142-329541e96b14}">
@@ -276,9 +268,11 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 	</object>
 	<object class="MixerBusEffectChain" id="{3b6da57c-3bc4-4378-a1e1-9d4a7e408578}">
 		<relationship name="effects">
-			<destination>{61e62c3c-4bf6-403f-ac0b-995fc130d802}</destination>
 			<destination>{7e159d8d-0f16-4c80-a1f2-e192f1ba4ff7}</destination>
 			<destination>{4b51a6f4-54d1-48b2-af1b-d5c9ee4aff47}</destination>
+			<destination>{4bfcf6ea-d256-47ea-9f8b-6c2daef5dd41}</destination>
+			<destination>{913e8b9a-5ac8-4d99-b44c-534219879228}</destination>
+			<destination>{f9b521e9-18a2-4bfd-b905-d2e1d9cab07a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{88a9f211-3119-42f1-8445-12f4db634bb2}" />
@@ -336,14 +330,6 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{16800829-3a94-4eee-b2ef-03cbd82c187d}" />
-	<object class="DistortionEffect" id="{61e62c3c-4bf6-403f-ac0b-995fc130d802}">
-		<property name="level">
-			<value>0.395000011</value>
-		</property>
-		<relationship name="automators">
-			<destination>{1dba83fc-8a8b-4a16-b1a8-e1906aa05f82}</destination>
-		</relationship>
-	</object>
 	<object class="MixerBusFader" id="{7e159d8d-0f16-4c80-a1f2-e192f1ba4ff7}" />
 	<object class="ProxyEffect" id="{4b51a6f4-54d1-48b2-af1b-d5c9ee4aff47}">
 		<property name="inputFormat">
@@ -352,6 +338,27 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		<relationship name="preset">
 			<destination>{4351ac12-8edf-48f6-b72e-5ff53f03e1d3}</destination>
 		</relationship>
+	</object>
+	<object class="ThreeEQEffect" id="{4bfcf6ea-d256-47ea-9f8b-6c2daef5dd41}">
+		<property name="highGain">
+			<value>-10</value>
+		</property>
+	</object>
+	<object class="FlangerEffect" id="{913e8b9a-5ac8-4d99-b44c-534219879228}">
+		<property name="rate">
+			<value>3.79999995</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{f9b521e9-18a2-4bfd-b905-d2e1d9cab07a}">
+		<property name="decayTime">
+			<value>1900</value>
+		</property>
+		<property name="earlyDelay">
+			<value>0</value>
+		</property>
+		<property name="lateDelay">
+			<value>0</value>
+		</property>
 	</object>
 	<object class="AutomationPoint" id="{fead805a-2589-4c75-8553-9ef26a93cb34}">
 		<property name="position">
@@ -375,9 +382,4 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 	<object class="MixerBusFader" id="{106d693c-b2b8-40f2-a5c2-4083197f8bae}" />
 	<object class="MixerBusFader" id="{2e46e201-423a-48d5-b69e-a1a80c2b734d}" />
 	<object class="MixerBusFader" id="{106cedea-990d-46c5-bd77-6e4565cc5124}" />
-	<object class="Automator" id="{1dba83fc-8a8b-4a16-b1a8-e1906aa05f82}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>level</value>
-		</property>
-	</object>
 </objects>

@@ -66,11 +66,13 @@ public class DeadEnemy : LDBrick
                     shooterObject.SetActive(false);
                     break;
                 case EnemyType.GLOOPY:
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/invoke_gloopy");
                     tombObject.SetActive(false);
                     gloopyObject.SetActive(true);
                     shooterObject.SetActive(false);
                     break;
                 case EnemyType.SHOOTER:
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/invoke_tower");
                     tombObject.SetActive(false);
                     gloopyObject.SetActive(false);
                     shooterObject.SetActive(true);
