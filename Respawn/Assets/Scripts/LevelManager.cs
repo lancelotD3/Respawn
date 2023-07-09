@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     float comp;
 
+    public GameObject Arrow;
+
     private void Awake()
     {
         advancementTMP = GetComponentInChildren<TMP_Text>();
@@ -43,9 +45,11 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             FinishLevel();
-
+            
         }
-
+        
+        var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        emitter.SetParameter("Level_comp", comp);
 
 
         string textAdvancement = CheckAdvancement().ToString() + " / " + ldBricks.Count.ToString();
@@ -60,8 +64,6 @@ public class LevelManager : MonoBehaviour
         //MARIUS
         GameManager.FinishLevel();
         StartCoroutine(FadeThenLoad());
-
-
     }
 
     IEnumerator FadeThenLoad()
@@ -81,10 +83,10 @@ public class LevelManager : MonoBehaviour
         foreach (LDBrick brick in ldBricks)
         {
             //MARIUS
-
+            
             if (brick.bFinished)
                 actualAdvancement++;
-            comp = (actualAdvancement / (ldBricks.Count + 1));
+            comp = (actualAdvancement / (ldBricks.Count+1));
             instance.setParameterByName("Level_comp", comp);
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level_comp", comp);
 
@@ -92,6 +94,9 @@ public class LevelManager : MonoBehaviour
 
         if (actualAdvancement == ldBricks.Count)
             levelFinished = true;
+
+        if (levelFinished)
+            Arrow.SetActive(true);
 
         return actualAdvancement;
     }

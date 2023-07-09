@@ -92,6 +92,11 @@ public class Heal : LDBrick
             bigUI.SetActive(!bigUI.activeSelf);
             pc.EnableController(!bigUI.activeSelf, true);
             pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+            emitter.SetParameter("parameter:/Liquid_Lvl", 0);
+            instance.release();
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            instance.start();
         }
 
         if (bigUI.activeSelf)
@@ -104,6 +109,7 @@ public class Heal : LDBrick
                 emitter.SetParameter("parameter:/Liquid_Lvl", 0);
                 instance.release();
                 instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                instance.start();
                 //MARIUS
                 bigUI.SetActive(false);
                 pc.EnableController(true);
