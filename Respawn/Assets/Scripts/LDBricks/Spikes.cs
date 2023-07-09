@@ -28,6 +28,9 @@ public class Spikes : MonoBehaviour
         if (pc.GetIsCarrying())
             pc.GetComponentInChildren<Portable>().Launch();
 
+        //MARIUS
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Props/spike_damage");
+        //MARIUS
         pc.Stun(stunTime);
     }
 }
