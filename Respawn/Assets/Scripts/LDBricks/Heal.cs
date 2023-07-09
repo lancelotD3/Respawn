@@ -24,15 +24,23 @@ public class Heal : LDBrick
     // between 0f and 1f
     private float value = 0f;
 
+
+    private PlayerController2D pc;
+
+    private void Awake()
+    {
+        pc = FindObjectOfType<PlayerController2D>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             canInteract = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
         {
             canInteract = false;
             bigUI.SetActive(false);
@@ -43,14 +51,14 @@ public class Heal : LDBrick
     {
         bFinished = value >= finishedThreshold && value <= 1f;
 
-        if (!canInteract)
+        if (!canInteract || pc.GetIsCarrying())
             return;
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             bigUI.SetActive(!bigUI.activeSelf);
-            FindObjectOfType<PlayerController2D>().EnableController(!bigUI.activeSelf);
-            FindObjectOfType<PlayerController2D>().GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            pc.EnableController(!bigUI.activeSelf, true);
+            pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         if (bigUI.activeSelf)
@@ -58,7 +66,7 @@ public class Heal : LDBrick
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 bigUI.SetActive(false);
-                FindObjectOfType<PlayerController2D>().EnableController(true);
+                pc.EnableController(true);
             }
 
             if (Input.GetKey(KeyCode.Space) && Time.time - counter > cooldown)

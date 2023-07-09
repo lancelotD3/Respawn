@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     public AnimationCurve timeForLevelcurve;
 
     public GameObject ticketListPanel;
-    public GameObject DefaultTicket;
+    public GameObject primaryCanvas;
+    public GameObject defaultTicketPrefab;
 
     public List<Level> idlingLevels = new List<Level>();
 
@@ -90,7 +91,7 @@ public class GameManager : MonoBehaviour
         newLevel.timer = timeForLevelcurve.Evaluate(timeLevel);
         newLevel.timerCounter = newLevel.timer;
 
-        GameObject newObject = Instantiate(DefaultTicket);
+        GameObject newObject = Instantiate(defaultTicketPrefab);
         Ticket newTicket = newObject.GetComponent<Ticket>();
         newTicket.nickName.text = "test";
         newTicket.time.text = newLevel.timer.ToString();
@@ -106,7 +107,7 @@ public class GameManager : MonoBehaviour
     {
         if (instance.idlingLevels.Count > 0)
         {
-            instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.ticketListPanel.transform.parent;
+            instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.primaryCanvas.transform;
             EnablePanel(false);
             instance.StartCoroutine(instance.FadeThenLoad());
         }
@@ -117,6 +118,8 @@ public class GameManager : MonoBehaviour
         FadeInFadeOut.FadeIn();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(instance.idlingLevels[0].name);
+        instance.primaryCanvas.transform.GetChild(0).GetComponent<Animator>().enabled = true;
+        instance.primaryCanvas.transform.GetChild(0).GetComponent<Animator>().Play("TicketFocus");
         FadeInFadeOut.FadeOut();
         yield return new WaitForSeconds(1f);
         FadeInFadeOut.Stop();
@@ -129,8 +132,8 @@ public class GameManager : MonoBehaviour
 
     public static void FinishLevel()
     {
-        instance.idlingLevels.RemoveAt(0);
         instance.score++;
-        Destroy(instance.ticketListPanel.transform.GetChild(0).gameObject);
+        instance.idlingLevels.RemoveAt(0);
+        Destroy(instance.primaryCanvas.transform.GetChild(0).gameObject);
     }
 }

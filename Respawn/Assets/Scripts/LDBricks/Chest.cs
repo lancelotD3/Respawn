@@ -30,6 +30,8 @@ public class Chest : LDBrick
     [SerializeField]
     private TextMeshProUGUI text3;
 
+    private PlayerController2D pc;
+
 
     private void Awake()
     {
@@ -37,11 +39,12 @@ public class Chest : LDBrick
         digit1 = Random.Range(0, 10);
         digit2 = Random.Range(0, 10);
         digit3 = Random.Range(0, 10);
+
+        pc = FindObjectOfType<PlayerController2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
         if (collision.TryGetComponent<Treasure>(out _))
         {
             bFull = true;
@@ -51,13 +54,13 @@ public class Chest : LDBrick
         if (!bFull)
             return;
 
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = false;
     }
 
@@ -65,14 +68,14 @@ public class Chest : LDBrick
     private void Update()
     {
         bFinished = digit0 == 0 && digit1 == 0 && digit2 == 0 && digit3 == 0;
-        if (!bCanInteract)
+        if (!bCanInteract || pc.GetIsCarrying())
             return;
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             ui.SetActive(!ui.activeSelf);
-            FindObjectOfType<PlayerController2D>().EnableController(!ui.activeSelf);
-            FindObjectOfType<PlayerController2D>().GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            pc.EnableController(!ui.activeSelf, true);
+            pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         if (ui.activeSelf)
@@ -80,9 +83,8 @@ public class Chest : LDBrick
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 ui.SetActive(false);
-                FindObjectOfType<PlayerController2D>().EnableController(true);
+                pc.EnableController(true);
             }
-
 
             if (Input.GetButtonDown(horizontalAxis))
             {
