@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NewLevel();
+        NewLevel(true);
     }
 
     private void Update()
@@ -84,10 +84,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void NewLevel()
+    private void NewLevel(bool haveTutoLevel = false)
     {
-        int levelid = Random.Range(0, gm.playableLevels.Count);
-        Level newLevel = new Level(gm.playableLevels[levelid]);
+        Level newLevel;
+
+        if(haveTutoLevel)
+        {
+            newLevel = new Level(gm.tutoLevel);
+        }
+        else
+        {
+            int levelid = Random.Range(0, gm.playableLevels.Count);
+            newLevel = new Level(gm.playableLevels[levelid]);
+        }
         newLevel.timer = timeForLevelcurve.Evaluate(timeLevel);
         newLevel.timerCounter = newLevel.timer;
 
