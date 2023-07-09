@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
 using static Unity.Burst.Intrinsics.X86.Avx;
+using System.Collections;
 
 [Serializable]
 
@@ -12,7 +13,7 @@ public class Level
     public Level() { }
 
 
-    public Level(Level level) 
+    public Level(Level level)
     {
         name = level.name;
         map = level.map;
@@ -39,7 +40,7 @@ public class GameMode : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null && instance != this)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
@@ -48,14 +49,23 @@ public class GameMode : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        
+
     }
 
     public static void PlayButton()
     {
-
-        SceneManager.LoadScene("WaitingRoom");
+        instance.StartCoroutine(instance.FadeThenLoad());
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level_comp", 0);
 
+    }
+    IEnumerator FadeThenLoad()
+    {
+        FadeInFadeOut.FadeIn();
+        GameObject.Find("Canvas").SetActive(false);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("WaitingRoom");
+        FadeInFadeOut.FadeOut();
+        yield return new WaitForSeconds(1f);
+        FadeInFadeOut.Stop();
     }
 }
