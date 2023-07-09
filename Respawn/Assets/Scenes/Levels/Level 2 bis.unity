@@ -333,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7168707237474732172, guid: b383856f924039341b40428de7f0a549, type: 3}
       propertyPath: bFinished
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7168707237474732172, guid: b383856f924039341b40428de7f0a549, type: 3}
       propertyPath: brickState
@@ -2605,7 +2605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7168707237474732172, guid: b383856f924039341b40428de7f0a549, type: 3}
       propertyPath: bFinished
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7168707237474732172, guid: b383856f924039341b40428de7f0a549, type: 3}
       propertyPath: brickState
