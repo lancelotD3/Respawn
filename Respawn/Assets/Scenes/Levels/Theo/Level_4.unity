@@ -2249,10 +2249,10 @@ Transform:
   - {fileID: 792608227}
   - {fileID: 1087339189}
   - {fileID: 390584672}
-  - {fileID: 701249829}
   - {fileID: 1169302445}
-  - {fileID: 1299759501}
+  - {fileID: 701249829}
   - {fileID: 2072993242}
+  - {fileID: 1299759501}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2896,7 +2896,7 @@ Transform:
   - {fileID: 2145933407}
   - {fileID: 581629106}
   m_Father: {fileID: 837239459}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1184686952
 GameObject:
@@ -4045,7 +4045,7 @@ PrefabInstance:
     - target: {fileID: 2116849448719274429, guid: 210a9cb5354b98c4cb60d468d6f751aa, type: 3}
       propertyPath: WantedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5fd56666d5fb0674bac2355fcb803ebe, type: 3}
+      objectReference: {fileID: 21300000, guid: 16f53fc895a28cc44a615b40f9e43248, type: 3}
     - target: {fileID: 5631744694917778365, guid: 210a9cb5354b98c4cb60d468d6f751aa, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4497,7 +4497,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 837239459}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2072993243
 SpriteRenderer:
