@@ -39,7 +39,7 @@ public class Shooter : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_preshoot");
         }
 
-            if (Time.time - shootTime >= rate)
+        if (Time.time - shootTime >= rate)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_shoot");
 

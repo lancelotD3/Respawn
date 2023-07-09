@@ -43,9 +43,9 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             FinishLevel();
-            
+
         }
-        
+
 
 
         string textAdvancement = CheckAdvancement().ToString() + " / " + ldBricks.Count.ToString();
@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
         GameManager.FinishLevel();
         StartCoroutine(FadeThenLoad());
 
-        
+
     }
 
     IEnumerator FadeThenLoad()
@@ -81,10 +81,10 @@ public class LevelManager : MonoBehaviour
         foreach (LDBrick brick in ldBricks)
         {
             //MARIUS
-            
+
             if (brick.bFinished)
                 actualAdvancement++;
-            comp = (actualAdvancement / (ldBricks.Count+1));
+            comp = (actualAdvancement / (ldBricks.Count + 1));
             instance.setParameterByName("Level_comp", comp);
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level_comp", comp);
 
