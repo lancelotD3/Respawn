@@ -33,8 +33,16 @@ public class Shooter : MonoBehaviour
         if (target == null)
             return;
 
-        if (Time.time - shootTime >= rate)
+        //MARIUS
+        if ((Time.time - shootTime + 1.4 >= rate) && (Time.time - shootTime + 1.25 <= rate))
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_preshoot");
+        }
+
+            if (Time.time - shootTime >= rate)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_shoot");
+
             GameObject bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position;
             bullet.GetComponent<Bullet>().GetComponent<Rigidbody2D>().AddForce((target.transform.position -
