@@ -107,9 +107,20 @@ public class GameManager : MonoBehaviour
     {
         if (instance.idlingLevels.Count > 0)
         {
+            instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.ticketListPanel.transform.parent;
             EnablePanel(false);
-            SceneManager.LoadScene(instance.idlingLevels[0].name);
+            instance.StartCoroutine(instance.FadeThenLoad());
         }
+    }
+
+    IEnumerator FadeThenLoad()
+    {
+        FadeInFadeOut.FadeIn();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(instance.idlingLevels[0].name);
+        FadeInFadeOut.FadeOut();
+        yield return new WaitForSeconds(1f);
+        FadeInFadeOut.Stop();
     }
 
     public static void EnablePanel(bool enable)
@@ -122,6 +133,5 @@ public class GameManager : MonoBehaviour
         instance.idlingLevels.RemoveAt(0);
         instance.score++;
         Destroy(instance.ticketListPanel.transform.GetChild(0).gameObject);
-        //Debug.Log(score);
     }
 }
