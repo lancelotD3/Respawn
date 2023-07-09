@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8bb833e4-bc69-4fd4-be4b-10305648fcf9}">
+		<property name="name">
+			<value>Damage_taken</value>
+		</property>
+		<relationship name="folder">
+			<destination>{73f09380-fa62-4c36-a88c-f5ad3c7d28d3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8bc7451d-abfa-41c4-902f-5a9324f769db}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8bc7451d-abfa-41c4-902f-5a9324f769db}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="velocity">
+			<value>0.39999997615814209</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
