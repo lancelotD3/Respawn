@@ -812,14 +812,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.data[0].map
+      value: 
+      objectReference: {fileID: 21300000, guid: d895cf989b344ce48a5bc3dfb699b236, type: 3}
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.data[1].map
+      value: 
+      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[0].name
-      value: Level 1
+      value: DrodroTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.data[1].name
+      value: DrodroTest
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[0].timer
+      value: 60000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
+      propertyPath: playableLevels.Array.data[1].timer
       value: 60000
       objectReference: {fileID: 0}
     - target: {fileID: 8901814664529526468, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}

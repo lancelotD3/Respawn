@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject ticketListPanel;
     public GameObject DefaultTicket;
 
-    List<Level> idlingLevels = new List<Level>();
+    public List<Level> idlingLevels = new List<Level>();
 
     int score = 0;
     float timeLevel = 0;
@@ -89,7 +89,6 @@ public class GameManager : MonoBehaviour
         Level newLevel = new Level(gm.playableLevels[levelid]);
         newLevel.timer = timeForLevelcurve.Evaluate(timeLevel);
         newLevel.timerCounter = newLevel.timer;
-        Debug.Log(timeForLevelcurve.Evaluate(timeLevel));
 
         GameObject newObject = Instantiate(DefaultTicket);
         Ticket newTicket = newObject.GetComponent<Ticket>();
