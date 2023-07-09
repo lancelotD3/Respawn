@@ -35,7 +35,6 @@ public class GameMode : MonoBehaviour
     public Level tutoLevel;
     public List<string> playersNames;
 
-    private FMOD.Studio.EventInstance music;
 
     private void Awake()
     {
@@ -48,15 +47,13 @@ public class GameMode : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        music = FMODUnity.RuntimeManager.CreateInstance("event:/music/Snow_level");
-        music.start();
-        music.setParameterByName("Transi", 1);
+        
     }
 
     public static void PlayButton()
     {
+
         SceneManager.LoadScene("WaitingRoom");
 
-        //music.setParameterByName("Transi", 0);
     }
 }

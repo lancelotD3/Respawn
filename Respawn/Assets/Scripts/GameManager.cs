@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
 
+    private FMOD.Studio.EventInstance music;
+
+
 
     public AnimationCurve timeBetweenTicektcurve;
     public AnimationCurve timeForLevelcurve;
@@ -30,6 +33,16 @@ public class GameManager : MonoBehaviour
     {
         gm = FindObjectOfType<GameMode>();
         timeNextLevel = timeBetweenTicektcurve.Evaluate(timeLevel);
+
+        //MARIUS
+        music = FMODUnity.RuntimeManager.CreateInstance("event:/music/Snow_level");
+        music.start();//MARIUS
+        music.setParameterByName("Level_comp", 0);
+
+        music.setParameterByName("Transi", 1);
+        //MARIUS
+        //MARIUS
+
 
         if (instance != null && instance != this)
         {

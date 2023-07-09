@@ -85,6 +85,9 @@
 		<property name="maxVoices">
 			<value>1</value>
 		</property>
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
 	</object>
 	<object class="MarkerTrack" id="{6be0446b-1f6e-4efd-95d9-09549ef3d59d}" />
 	<object class="MarkerTrack" id="{4eba4d38-5165-418a-aaa4-c68c8653694d}" />
@@ -996,6 +999,9 @@
 		</property>
 		<property name="volume">
 			<value>-2</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{6dacaeb4-954a-4bfa-b4ab-acd4ff294b11}</destination>
