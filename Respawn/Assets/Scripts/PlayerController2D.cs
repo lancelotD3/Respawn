@@ -54,6 +54,10 @@ public class PlayerController2D : MonoBehaviour
         // raycasts will ignore already colliding objects
         Physics2D.queriesStartInColliders = false;
         Physics2D.queriesHitTriggers = false;
+
+        //MARIUS
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Chara/happy");
+        //MARIUS
     }
 
     [HideInInspector]
@@ -141,6 +145,10 @@ public class PlayerController2D : MonoBehaviour
             coyoteTimeCounter = 0f;
             if (rb.velocity.y > adaptativeJumpSpeedThreshold)
                 rb.AddForce(Vector2.up * Physics2D.gravity.y * gravityMultiplier, ForceMode2D.Impulse);
+
+                //MARIUS
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Chara/jump");
+                //MARIUS
         }
 
         if (Input.GetButtonDown(jumpButton))
