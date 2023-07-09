@@ -26,6 +26,8 @@ public class Bullet : MonoBehaviour
         {
             Rigidbody2D rb = pc.GetComponent<Rigidbody2D>();
 
+            FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_damage");
+
             Vector2 dir = (Vector3.right * (collision.transform.position.x - transform.position.x)).normalized;
             rb.velocity = Vector2.zero;
             rb.AddForce(dir * repulsionForce, ForceMode2D.Impulse);
@@ -38,6 +40,7 @@ public class Bullet : MonoBehaviour
         }
         
         if (!collision.isTrigger)
+            FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/bullet_touch");
             Destroy(gameObject);
     }
 }

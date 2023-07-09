@@ -43,10 +43,13 @@ public class Portable : MonoBehaviour
             {
                 if (bCanInteract)
                     PickUp();
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Action/Pull_up"); //MARIUS
             }
             else
             {
                 Launch();
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Action/Put_down"); //MARIUS
+
             }
         }
     }
