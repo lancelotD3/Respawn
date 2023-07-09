@@ -16,9 +16,7 @@ public class Heal : LDBrick
     [SerializeField]
     private float cooldown = 1f;
     [SerializeField]
-    private Image image;
-    [SerializeField]
-    private Image image2;
+    private Image imageUI;
     [SerializeField]
     private GameObject bigUI;
     [SerializeField]
@@ -27,6 +25,11 @@ public class Heal : LDBrick
     private float counter = 0f;
     // between 0f and 1f
     private float value = 0f;
+
+    [SerializeField]
+    private GameObject full;
+    [SerializeField]
+    private GameObject empty;
 
 
     private PlayerController2D pc;
@@ -59,9 +62,25 @@ public class Heal : LDBrick
     public float min = 0f;
     public float max = 1f;
 
+    public GameObject bouteille;
+    public GameObject verser;
+    public GameObject star;
+
     private void Update()
     {
         bFinished = value >= finishedThreshold && value <= 1f;
+        if (bFinished)
+        {
+            full.SetActive(true);
+            empty.SetActive(false);
+            star.SetActive(true);
+        }
+        else
+        {
+            full.SetActive(false);
+            empty.SetActive(true);
+            star.SetActive(false);
+        }
 
         if (!canInteract || pc.GetIsCarrying())
             return;
@@ -93,6 +112,8 @@ public class Heal : LDBrick
 
             }
 
+            bouteille.SetActive(true);
+            verser.SetActive(false);
             if (Input.GetKey(KeyCode.Space) && Time.time - counter > cooldown)
             {
                 instance.setParameterByName("parameter:/Liquid_Lvl", value);
@@ -109,10 +130,10 @@ public class Heal : LDBrick
 
                 float y = Unity.Mathematics.math.remap(0f, 1f, min, max, value);
                 
-                
+                imageUI.rectTransform.localPosition = Vector3.up * y;
 
-                image.rectTransform.localPosition = Vector3.up * y;
-                image2.rectTransform.localPosition = Vector3.up * y;
+                bouteille.SetActive(false);
+                verser.SetActive(true);
             }
         }
     }
