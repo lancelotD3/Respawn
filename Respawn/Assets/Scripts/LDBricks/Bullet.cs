@@ -10,6 +10,10 @@ public class Bullet : MonoBehaviour
     private float stunTime = 2f;
 
 
+    private void Awake()
+    {
+        Physics2D.queriesHitTriggers = false;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,20 +21,23 @@ public class Bullet : MonoBehaviour
         if (collision.TryGetComponent<Shooter>(out _))
             return;
 
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        PlayerController2D pc;
+        if (collision.TryGetComponent<PlayerController2D>(out pc))
         {
-            Debug.Log(collision.name);
-            PlayerController2D pc;
-            if (!collision.TryGetComponent<PlayerController2D>(out pc))
-                return;
+            Rigidbody2D rb = pc.GetComponent<Rigidbody2D>();
 
             Vector2 dir = (Vector3.right * (collision.transform.position.x - transform.position.x)).normalized;
-            pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            pc.GetComponent<Rigidbody2D>().AddForce(dir * repulsionForce, ForceMode2D.Impulse);
-            pc.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Physics2D.gravity.y * pc.gravityMultiplier, ForceMode2D.Impulse);
+            rb.velocity = Vector2.zero;
+            rb.AddForce(dir * repulsionForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * Physics2D.gravity.y * pc.gravityMultiplier, ForceMode2D.Impulse);
+
+            if (pc.GetIsCarrying())
+                pc.GetComponentInChildren<Portable>().Launch();
+
             pc.Stun(stunTime);
-            Debug.Log(collision.name);
         }
-        Destroy(gameObject);
+        
+        if (!collision.isTrigger)
+            Destroy(gameObject);
     }
 }

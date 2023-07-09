@@ -8,24 +8,30 @@ public class Portable : MonoBehaviour
     private bool bCanInteract = false;
     private bool bPickedUp = false;
 
+    private PlayerController2D pc;
+
     private void Awake()
     {
+        pc = FindObjectOfType<PlayerController2D>();
+
         //PhysicsMaterial2D m = new PhysicsMaterial2D();
         //m.friction = 999f;
         //GetComponent<Rigidbody2D>().sharedMaterial = m;
         //GetComponent<BoxCollider2D>().sharedMaterial = m;
         //GetComponent<CircleCollider2D>().sharedMaterial = m;
+
+        Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), pc.GetComponent<CapsuleCollider2D>());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = false;
     }
 
@@ -50,7 +56,6 @@ public class Portable : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = true;
         GetComponent<BoxCollider2D>().isTrigger = true;
 
-        PlayerController2D pc = FindObjectOfType<PlayerController2D>();
         transform.position = pc.transform.position;
         transform.position += Vector3.up * (pc.transform.localScale.y + transform.localScale.y * 0.5f);
         transform.parent = pc.transform;
@@ -63,7 +68,7 @@ public class Portable : MonoBehaviour
     private float launchForce = 5f;
     [SerializeField]
     private float verticalForce = 0.5f;
-    private void Launch()
+    public void Launch()
     {
         GetComponent<BoxCollider2D>().isTrigger = false;
         GetComponent<Rigidbody2D>().isKinematic = false;
@@ -72,7 +77,6 @@ public class Portable : MonoBehaviour
         bPickedUp = false;
         bCanInteract = false;
 
-        PlayerController2D pc = FindObjectOfType<PlayerController2D>();
         GetComponent<Rigidbody2D>().AddForce((pc.lastInputVelocity.normalized +
             Vector2.up * verticalForce) * launchForce + pc.GetComponent<Rigidbody2D>().velocity,
             ForceMode2D.Impulse);

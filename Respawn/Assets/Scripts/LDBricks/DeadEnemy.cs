@@ -28,15 +28,23 @@ public class DeadEnemy : LDBrick
 
     private EnemyType enemyType = EnemyType.TOMB;
 
+    private PlayerController2D pc;
+
+
+    private void Awake()
+    {
+        pc = FindObjectOfType<PlayerController2D>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = false;
     }
 
@@ -45,7 +53,7 @@ public class DeadEnemy : LDBrick
         if (!bCanInteract)
             return;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !pc.GetIsCarrying())
         {
             enemyType += 1;
             enemyType = (EnemyType)((int)enemyType % 3);
