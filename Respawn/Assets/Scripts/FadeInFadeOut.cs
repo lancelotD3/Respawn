@@ -11,7 +11,7 @@ public class FadeInFadeOut : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+       
         instance = this;
         DontDestroyOnLoad(gameObject);
     }

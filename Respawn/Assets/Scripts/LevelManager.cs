@@ -43,9 +43,12 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             FinishLevel();
+            
         }
+        var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        emitter.SetParameter("Level_comp", comp);
 
-        
+
 
         string textAdvancement = CheckAdvancement().ToString() + " / " + ldBricks.Count.ToString();
         advancementTMP.text = textAdvancement;

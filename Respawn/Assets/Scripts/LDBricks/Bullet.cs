@@ -9,10 +9,17 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float stunTime = 2f;
 
-
     private void Awake()
     {
         Physics2D.queriesHitTriggers = false;
+    }
+
+    private void Update()
+    {
+        //transform.rotation = Quaternion.Euler(0, 0, Mathf.Cos(Vector2.Dot(Vector2.up, gameObject.GetComponent<Rigidbody2D>().velocity)));
+        //transform.rotation = Quaternion.LookRotation(gameObject.GetComponent<Rigidbody2D>().velocity);
+        //transform.rotation = Quaternion.Euler(0, 0, 45);
+        //Debug.Log(transform.rotation.eulerAngles);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +37,8 @@ public class Bullet : MonoBehaviour
 
             Vector2 dir = (Vector3.right * (collision.transform.position.x - transform.position.x)).normalized;
             rb.velocity = Vector2.zero;
+            transform.Rotate(new Vector3(rb.velocity.x, rb.velocity.x, rb.velocity.x));
+            Debug.Log(transform.rotation);
             rb.AddForce(dir * repulsionForce, ForceMode2D.Impulse);
             rb.AddForce(Vector2.up * Physics2D.gravity.y * pc.gravityMultiplier, ForceMode2D.Impulse);
 
