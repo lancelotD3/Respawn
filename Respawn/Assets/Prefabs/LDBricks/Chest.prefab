@@ -364,6 +364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bFinished: 0
+  closedChest: {fileID: 21300000, guid: 76cac08cabc9e584dac4e6fdaeb2afb1, type: 3}
+  openChest: {fileID: 21300000, guid: dce2d03474ed2254eac0b50d0ba3589d, type: 3}
+  locker: {fileID: 21300000, guid: 98d7ccddde4f0784e8ccf907997c9540, type: 3}
+  actualSprite: {fileID: 4073957549774465267}
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   ui: {fileID: 8585232150784154369}

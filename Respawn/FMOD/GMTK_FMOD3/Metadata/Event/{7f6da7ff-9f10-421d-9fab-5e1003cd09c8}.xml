@@ -85,6 +85,9 @@
 		<property name="maxVoices">
 			<value>1</value>
 		</property>
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
 	</object>
 	<object class="MarkerTrack" id="{6be0446b-1f6e-4efd-95d9-09549ef3d59d}" />
 	<object class="MarkerTrack" id="{4eba4d38-5165-418a-aaa4-c68c8653694d}" />
@@ -997,6 +1000,9 @@
 		<property name="volume">
 			<value>-2</value>
 		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{6dacaeb4-954a-4bfa-b4ab-acd4ff294b11}</destination>
 		</relationship>
@@ -1069,7 +1075,7 @@
 	</object>
 	<object class="EventSound" id="{d9480c8e-cabb-481f-9819-513153d6d1ab}">
 		<property name="start">
-			<value>12.705882352941178</value>
+			<value>12.396410118070214</value>
 		</property>
 		<property name="length">
 			<value>2.09375</value>

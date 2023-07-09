@@ -9,6 +9,12 @@ public class Chest : LDBrick
     private bool bCanInteract = false;
     bool anti_spam = false;
 
+    public Sprite closedChest;
+    public Sprite openChest;
+    public Sprite locker;
+
+    public SpriteRenderer actualSprite;
+
     [SerializeField]
     private string horizontalAxis = "Horizontal";
     [SerializeField]
@@ -49,6 +55,7 @@ public class Chest : LDBrick
         if (collision.TryGetComponent<Treasure>(out _))
         {
             bFull = true;
+            actualSprite.sprite = closedChest;
             Destroy(collision.gameObject);
         }
 
@@ -69,6 +76,12 @@ public class Chest : LDBrick
     private void Update()
     {
         bFinished = digit0 == 0 && digit1 == 0 && digit2 == 0 && digit3 == 0;
+
+        if (bFinished)
+            actualSprite.sprite = locker;
+        else if(bFull)
+            actualSprite.sprite = closedChest;
+
         if (!bCanInteract || pc.GetIsCarrying())
             return;
 
