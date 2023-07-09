@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 [Serializable]
 
@@ -54,6 +55,7 @@ public class GameMode : MonoBehaviour
     {
 
         SceneManager.LoadScene("WaitingRoom");
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level_comp", 0);
 
     }
 }
