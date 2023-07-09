@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
 public class BloodStain : LDBrick
 {
-    bool bCanInteract = false;
+    private bool bCanInteract = false;
 
     [SerializeField]
     private SpriteRenderer sprite;
@@ -14,20 +13,23 @@ public class BloodStain : LDBrick
     private const int stain = 10;
     private int actualStain = 0;
 
+    private PlayerController2D pc;
+
     private void Awake()
     {
+        pc = FindObjectOfType<PlayerController2D>();
         actualStain = stain;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerController2D>(out _))
+        if (collision.gameObject == pc.gameObject)
             bCanInteract = false;
     }
 
@@ -36,9 +38,8 @@ public class BloodStain : LDBrick
         if (!bCanInteract)
             return;
 
-        if (Input.GetKeyDown(KeyCode.E) && !bFinished)
+        if (Input.GetKeyDown(KeyCode.E) && !bFinished && !pc.GetIsCarrying())
         {
-            PlayerController2D pc = FindObjectOfType<PlayerController2D>();
             pc.StartSwipe();
             pc.rightSwipe = !pc.rightSwipe;
 
