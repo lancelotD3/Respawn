@@ -107,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8567809805718793012}
   - component: {fileID: 4978817640809005057}
+  - component: {fileID: -4019741855006144927}
   m_Layer: 0
   m_Name: FadeInFadeOut
   m_TagString: Untagged
@@ -142,6 +143,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c6ff921ce07f7468351aa401c240dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4019741855006144927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255092394206082643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Transi
+  TriggerEvent: 11
+  Value: 1
 --- !u!1 &7865301394830396478
 GameObject:
   m_ObjectHideFlags: 0
