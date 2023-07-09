@@ -1,0 +1,1320 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8598785554435460435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/GMTK_FMOD3/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638245023761474348
+  FileSizes:
+  - Name: Desktop
+    Value: 2845984
+  Exists: 1
+--- !u!114 &-8367327034782971612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/gloopy_damage/Damage_taken
+  m_EditorClassIdentifier: 
+  Name: Damage_taken
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 625349392
+    data2: 1956630743
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8313062775171361824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/Brick_fissure
+  m_EditorClassIdentifier: 
+  Path: event:/Props/Brick_fissure
+  Guid:
+    Data1: 58878651
+    Data2: 1242497830
+    Data3: 1367401373
+    Data4: 814049235
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-7855852867473361243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Snow_level/map
+  m_EditorClassIdentifier: 
+  Name: map
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4158555827
+    data2: 1753977845
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-7721328725918816689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/chara/effort
+  m_EditorClassIdentifier: 
+  Path: event:/chara/effort
+  Guid:
+    Data1: 895977423
+    Data2: 1341942939
+    Data3: 919036061
+    Data4: 694696327
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 625
+--- !u!114 &-7330865009395322018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/gloopy_bounce
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/gloopy_bounce
+  Guid:
+    Data1: -2003317181
+    Data2: 1201083837
+    Data3: 1452417469
+    Data4: -617528591
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4730
+--- !u!114 &-7129482252584852444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/chara/takes_damage
+  m_EditorClassIdentifier: 
+  Path: event:/chara/takes_damage
+  Guid:
+    Data1: -1571771917
+    Data2: 1175548789
+    Data3: -409717610
+    Data4: -1224151668
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-6081433712674308309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/chara/sad
+  m_EditorClassIdentifier: 
+  Path: event:/chara/sad
+  Guid:
+    Data1: 1936147343
+    Data2: 1293537145
+    Data3: 1174006405
+    Data4: -2079078682
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1218
+--- !u!114 &-5934065879869817855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/Chest_close
+  m_EditorClassIdentifier: 
+  Path: event:/Props/Chest_close
+  Guid:
+    Data1: -548029867
+    Data2: 1292196683
+    Data3: -1429045833
+    Data4: 1178456380
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1042
+--- !u!114 &-5883705512311056682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Action/Pull_up_crystal
+  m_EditorClassIdentifier: 
+  Path: event:/Action/Pull_up_crystal
+  Guid:
+    Data1: 559121790
+    Data2: 1128825670
+    Data3: -316620878
+    Data4: -781171638
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 995
+--- !u!114 &-5377767975656389894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Map_on/map
+  m_EditorClassIdentifier: 
+  Name: map
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4158555827
+    data2: 1753977845
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-5205946557556165386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/bullet_touch
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/bullet_touch
+  Guid:
+    Data1: 1584354787
+    Data2: 1101798541
+    Data3: -898743145
+    Data4: -1430730333
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1111
+--- !u!114 &-4713908605335653116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Action/Put_down
+  m_EditorClassIdentifier: 
+  Path: event:/Action/Put_down
+  Guid:
+    Data1: 688603166
+    Data2: 1080119650
+    Data3: -1837425235
+    Data4: -329368143
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 292
+--- !u!114 &-4584199164177360780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/chara/happy
+  m_EditorClassIdentifier: 
+  Path: event:/chara/happy
+  Guid:
+    Data1: -1076531581
+    Data2: 1290673351
+    Data3: -1474539105
+    Data4: -49499056
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 906
+--- !u!114 &-4045169884020279363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/tower_shoot
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/tower_shoot
+  Guid:
+    Data1: -627228371
+    Data2: 1112295665
+    Data3: 1762429061
+    Data4: -273808296
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2186
+--- !u!114 &-3487517347880127956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Snow_level/Level_comp
+  m_EditorClassIdentifier: 
+  Name: Level_comp
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1212348160
+    data2: 178349482
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2190572441749949435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/tower_damage/Damage_taken
+  m_EditorClassIdentifier: 
+  Name: Damage_taken
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 625349392
+    data2: 1956630743
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2083947151974621269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Map_on
+  m_EditorClassIdentifier: 
+  Path: event:/Map_on
+  Guid:
+    Data1: 730724136
+    Data2: 1146121205
+    Data3: 1859797180
+    Data4: -351276041
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5377767975656389894}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 481
+--- !u!114 &-1391972796949010547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Action/Put_down_crystal
+  m_EditorClassIdentifier: 
+  Path: event:/Action/Put_down_crystal
+  Guid:
+    Data1: -136041430
+    Data2: 1324126629
+    Data3: -1158583647
+    Data4: -2011120418
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 755
+--- !u!114 &-1002110010381528072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/tower_damage
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/tower_damage
+  Guid:
+    Data1: 975216581
+    Data2: 1091303233
+    Data3: 762111891
+    Data4: -937236869
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2190572441749949435}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3334
+--- !u!114 &-566700856668970157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/gloopy_damage
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/gloopy_damage
+  Guid:
+    Data1: -153732980
+    Data2: 1103271673
+    Data3: -271054182
+    Data4: -189502051
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8367327034782971612}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3334
+--- !u!114 &-274545057271605410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mini_Jeu/code_chest_click
+  m_EditorClassIdentifier: 
+  Path: event:/Mini_Jeu/code_chest_click
+  Guid:
+    Data1: 648541478
+    Data2: 1287747090
+    Data3: 195671222
+    Data4: 1834266124
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 188
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 6123629281906413900}
+  - {fileID: -8598785554435460435}
+  EditorEvents:
+  - {fileID: 7854116274432246981}
+  - {fileID: 4489707217947905913}
+  - {fileID: -4713908605335653116}
+  - {fileID: -274545057271605410}
+  - {fileID: -2083947151974621269}
+  - {fileID: -1391972796949010547}
+  - {fileID: -4045169884020279363}
+  - {fileID: 7034587183694371456}
+  - {fileID: 3325217412716807692}
+  - {fileID: -7330865009395322018}
+  - {fileID: 2039888620932399226}
+  - {fileID: -5934065879869817855}
+  - {fileID: 1719282792349813655}
+  - {fileID: 7720350806983770914}
+  - {fileID: 7895363001257812431}
+  - {fileID: -5883705512311056682}
+  - {fileID: -4584199164177360780}
+  - {fileID: -566700856668970157}
+  - {fileID: -6081433712674308309}
+  - {fileID: 988257553650439596}
+  - {fileID: 518238640264995308}
+  - {fileID: -8313062775171361824}
+  - {fileID: -1002110010381528072}
+  - {fileID: 4598913805220088209}
+  - {fileID: -7721328725918816689}
+  - {fileID: 1606542851892357932}
+  - {fileID: 1938548524026435287}
+  - {fileID: 9070776895697195411}
+  - {fileID: 1046225525294830624}
+  - {fileID: 1065290491666351203}
+  - {fileID: -5205946557556165386}
+  - {fileID: 4607773120506201309}
+  - {fileID: 2736593254170934145}
+  - {fileID: -7129482252584852444}
+  - {fileID: 4437983276123512690}
+  EditorParameters:
+  - {fileID: 8249323510144278924}
+  - {fileID: 4630229303157905722}
+  MasterBanks:
+  - {fileID: -8598785554435460435}
+  StringsBanks:
+  - {fileID: 6123629281906413900}
+  cacheTime: 638245023761609696
+  cacheVersion: 131605
+--- !u!114 &518238640264995308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/chara/wander
+  m_EditorClassIdentifier: 
+  Path: event:/chara/wander
+  Guid:
+    Data1: 1842295218
+    Data2: 1134767419
+    Data3: -1044398448
+    Data4: 242995435
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2093
+--- !u!114 &988257553650439596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/clic_off
+  m_EditorClassIdentifier: 
+  Path: event:/clic_off
+  Guid:
+    Data1: -190333008
+    Data2: 1318323957
+    Data3: -820082554
+    Data4: 709525399
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 37
+--- !u!114 &1046225525294830624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mini_Jeu/Liquid_Pouring
+  m_EditorClassIdentifier: 
+  Path: event:/Mini_Jeu/Liquid_Pouring
+  Guid:
+    Data1: -2038185511
+    Data2: 1222461655
+    Data3: -805662056
+    Data4: -2099652259
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8204948365113439322}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1065290491666351203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/Brick_Placed
+  m_EditorClassIdentifier: 
+  Path: event:/Props/Brick_Placed
+  Guid:
+    Data1: 522805472
+    Data2: 1083939060
+    Data3: 1461717181
+    Data4: -50263980
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &1606542851892357932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/invoke_tower
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/invoke_tower
+  Guid:
+    Data1: 1033598420
+    Data2: 1313658665
+    Data3: 1864947851
+    Data4: -656363442
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &1719282792349813655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/Chest_open
+  m_EditorClassIdentifier: 
+  Path: event:/Props/Chest_open
+  Guid:
+    Data1: -463525269
+    Data2: 1092146905
+    Data3: 19721623
+    Data4: -1694715301
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 750
+--- !u!114 &1938548524026435287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Action/heal
+  m_EditorClassIdentifier: 
+  Path: event:/Action/heal
+  Guid:
+    Data1: -2061820713
+    Data2: 1256936229
+    Data3: 1309855394
+    Data4: -1329906934
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3181
+--- !u!114 &2039888620932399226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mini_Jeu/slide_chest
+  m_EditorClassIdentifier: 
+  Path: event:/Mini_Jeu/slide_chest
+  Guid:
+    Data1: 577190989
+    Data2: 1144271691
+    Data3: -1173017180
+    Data4: 1477887319
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 487
+--- !u!114 &2736593254170934145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Action/Pull_up
+  m_EditorClassIdentifier: 
+  Path: event:/Action/Pull_up
+  Guid:
+    Data1: -1908840219
+    Data2: 1206037707
+    Data3: 810145955
+    Data4: -1117559000
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 191
+--- !u!114 &3325217412716807692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/tower_preshoot
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/tower_preshoot
+  Guid:
+    Data1: -645572289
+    Data2: 1315874461
+    Data3: -1531623276
+    Data4: -1532473078
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1425
+--- !u!114 &3689267293489443868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Snow_level/Damage_taken
+  m_EditorClassIdentifier: 
+  Name: Damage_taken
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 625349392
+    data2: 1956630743
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4056871280829222071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Map_off/map
+  m_EditorClassIdentifier: 
+  Name: map
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4158555827
+    data2: 1753977845
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4437983276123512690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Snow_level
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Snow_level
+  Guid:
+    Data1: 2137892863
+    Data2: 1109237520
+    Data3: 274639775
+    Data4: -938881789
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3487517347880127956}
+  - {fileID: -7855852867473361243}
+  - {fileID: 3689267293489443868}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70588
+--- !u!114 &4489707217947905913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/Coin
+  m_EditorClassIdentifier: 
+  Path: event:/Props/Coin
+  Guid:
+    Data1: -607296486
+    Data2: 1314924041
+    Data3: 554850196
+    Data4: -843624032
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &4598913805220088209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/Brick_break
+  m_EditorClassIdentifier: 
+  Path: event:/Props/Brick_break
+  Guid:
+    Data1: 1974992846
+    Data2: 1337300501
+    Data3: 630681478
+    Data4: 1058048819
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2742
+--- !u!114 &4607773120506201309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/chara/jump
+  m_EditorClassIdentifier: 
+  Path: event:/chara/jump
+  Guid:
+    Data1: -1455051548
+    Data2: 1225347784
+    Data3: -227438463
+    Data4: 1006102422
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 281
+--- !u!114 &4630229303157905722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/map
+  m_EditorClassIdentifier: 
+  Name: map
+  StudioPath: parameter:/map
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4158555827
+    data2: 1753977845
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &6123629281906413900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/GMTK_FMOD3/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638245023761609696
+  FileSizes:
+  - Name: Desktop
+    Value: 2614
+  Exists: 1
+--- !u!114 &7034587183694371456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemies/invoke_gloopy
+  m_EditorClassIdentifier: 
+  Path: event:/enemies/invoke_gloopy
+  Guid:
+    Data1: -342351813
+    Data2: 1319817898
+    Data3: -115743568
+    Data4: -967360587
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &7265135234792241303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/spike_damage/Damage_taken
+  m_EditorClassIdentifier: 
+  Name: Damage_taken
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 625349392
+    data2: 1956630743
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7720350806983770914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Map_off
+  m_EditorClassIdentifier: 
+  Path: event:/Map_off
+  Guid:
+    Data1: 445819761
+    Data2: 1274916779
+    Data3: -1804112721
+    Data4: 339559068
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4056871280829222071}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 465
+--- !u!114 &7854116274432246981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/clic_on
+  m_EditorClassIdentifier: 
+  Path: event:/clic_on
+  Guid:
+    Data1: -1508775155
+    Data2: 1325398285
+    Data3: 1458388873
+    Data4: 791392806
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32
+--- !u!114 &7895363001257812431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Props/spike_damage
+  m_EditorClassIdentifier: 
+  Path: event:/Props/spike_damage
+  Guid:
+    Data1: -652404356
+    Data2: 1269806980
+    Data3: -686182515
+    Data4: -1805577323
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7265135234792241303}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3334
+--- !u!114 &8204948365113439322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Liquid_Pouring/Liquid_Lvl
+  m_EditorClassIdentifier: 
+  Name: Liquid_Lvl
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 10206584
+    data2: 3584653747
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8249323510144278924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Damage_taken
+  m_EditorClassIdentifier: 
+  Name: Damage_taken
+  StudioPath: parameter:/Damage_taken
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 625349392
+    data2: 1956630743
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &9070776895697195411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Action/wipe
+  m_EditorClassIdentifier: 
+  Path: event:/Action/wipe
+  Guid:
+    Data1: 222719448
+    Data2: 1283434058
+    Data3: -1198234473
+    Data4: 1201040889
+  Banks:
+  - {fileID: -8598785554435460435}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1702
