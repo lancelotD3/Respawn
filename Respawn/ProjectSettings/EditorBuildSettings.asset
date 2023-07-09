@@ -21,27 +21,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Theo/Level 1.unity
     guid: c06bde3e6a79bb14bb5e4005a3f316fc
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/01_Tutoriel.unity
+    path: Assets/Scenes/Levels/Melanie/Level_0.unity
     guid: 70d57fc2825025a43b8756402b093589
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_01.unity
+    path: Assets/Scenes/Levels/Melanie/Level_11.unity
     guid: 4b2b9f1ee9640904189b7c9edf36b050
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_02.unity
+    path: Assets/Scenes/Levels/Melanie/Level_12.unity
     guid: 9ed58515ddb297949a1f7ec971b48c42
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_03.unity
+    path: Assets/Scenes/Levels/Melanie/Level_13.unity
     guid: b23e72dd8b838b84ab0f7029b179105b
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_04.unity
+    path: Assets/Scenes/Levels/Melanie/Level_14.unity
     guid: cffa63412b93c1e4dbbf9cae5f65784d
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_05.unity
+    path: Assets/Scenes/Levels/Melanie/Level_15.unity
     guid: 8baaca232f175ed4eae4ab48d52193f3
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_06.unity
+    path: Assets/Scenes/Levels/Melanie/Level_16.unity
     guid: 14f67447f6654ff4ba52e520ccd79ec2
   - enabled: 1
-    path: Assets/Scenes/Levels/Melanie/E_07.unity
+    path: Assets/Scenes/Levels/Melanie/Level_17.unity
     guid: f778958fa7f1f5141a9cbf5efa5ccb76
   m_configObjects: {}
