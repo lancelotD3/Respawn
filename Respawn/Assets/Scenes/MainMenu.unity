@@ -219,6 +219,8 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -330,6 +332,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2137892863
+      Data2: 1109237520
+      Data3: 274639775
+      Data4: -938881789
+    Path: event:/Music/Snow_level
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: Transi
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Transi
+  TriggerEvent: 1
+  Value: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803664637}
   - component: {fileID: 803664636}
+  - component: {fileID: 803664638}
   m_Layer: 0
   m_Name: WaitingRoom
   m_TagString: Untagged
@@ -525,6 +577,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803664638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803664635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Transi
+  TriggerEvent: 1
+  Value: 1
 --- !u!1 &809968441
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1064,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: tutoLevel.name
-      value: 01_Tutoriel
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playersNames.Array.size
@@ -1004,7 +1072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playersNames.Array.data[0]
