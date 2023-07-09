@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     GameMode gm;
     private static GameManager instance;
 
+
+
     public AnimationCurve timeBetweenTicektcurve;
     public AnimationCurve timeForLevelcurve;
 
@@ -20,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public List<Level> idlingLevels = new List<Level>();
 
-    int score = 0;
+    public int score = 0;
     float timeLevel = 0;
     float timeNextLevel;
 
@@ -62,9 +64,7 @@ public class GameManager : MonoBehaviour
                 l.timerCounter -= Time.deltaTime;
                 int timeInt = (int)l.timerCounter;
                 l.ticket.time.text = timeInt.ToString();
-                l.ticket.loadingBar.transform.localPosition = new Vector3(-(l.timerCounter / l.timer) *
-                    l.ticket.loadingBar.rectTransform.rect.width,
-                l.ticket.loadingBar.transform.localPosition.y);
+                l.ticket.SetGFX(l.timerCounter / l.timer);
 
                 if (l.timerCounter <= 0)
                 {
@@ -74,9 +74,7 @@ public class GameManager : MonoBehaviour
             }
             if (abort)
             {
-                Debug.Log("t'as perdu gros looser");
-                Destroy(gameObject);
-                SceneManager.LoadScene("MainMenu");
+                StartCoroutine(FadeLose());
             }
         }
 
@@ -121,17 +119,28 @@ public class GameManager : MonoBehaviour
             GameObject.Find("PlayerChair").GetComponent<Animator>().Play("StartLevel");
             instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.primaryCanvas.transform;
             EnablePanel(false);
-            instance.StartCoroutine(instance.FadeThenLoad());
+            instance.StartCoroutine(instance.FadeThenLoad(instance.idlingLevels[0].name));
+
         }
     }
 
-    IEnumerator FadeThenLoad()
+    IEnumerator FadeThenLoad(string name)
     {
         FadeInFadeOut.FadeIn();
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(instance.idlingLevels[0].name);
+        SceneManager.LoadScene(name);
         instance.primaryCanvas.transform.GetChild(0).GetComponent<Animator>().enabled = true;
         instance.primaryCanvas.transform.GetChild(0).GetComponent<Animator>().Play("TicketFocus");
+        FadeInFadeOut.FadeOut();
+        yield return new WaitForSeconds(1f);
+        FadeInFadeOut.Stop();
+    }
+
+    IEnumerator FadeLose()
+    {
+        FadeInFadeOut.FadeIn();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Losing");
         FadeInFadeOut.FadeOut();
         yield return new WaitForSeconds(1f);
         FadeInFadeOut.Stop();
@@ -148,4 +157,6 @@ public class GameManager : MonoBehaviour
         instance.idlingLevels.RemoveAt(0);
         Destroy(instance.primaryCanvas.transform.GetChild(0).gameObject);
     }
+
+    public void FinishGame() => Destroy(gameObject);
 }
