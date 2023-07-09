@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 public class Heal : LDBrick
 {
     private bool canInteract = false;
+
+
+    private FMOD.Studio.EventInstance instance;
 
     [SerializeField]
     private float fillSpeed = 0.2f;
@@ -30,6 +34,11 @@ public class Heal : LDBrick
     private void Awake()
     {
         pc = FindObjectOfType<PlayerController2D>();
+        //MARIUS
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Mini_Jeu/Liquid_Pouring");
+        instance.start();
+        //MARIUS
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,6 +68,8 @@ public class Heal : LDBrick
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Chara/wander");
             bigUI.SetActive(!bigUI.activeSelf);
             pc.EnableController(!bigUI.activeSelf, true);
             pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -68,13 +79,28 @@ public class Heal : LDBrick
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+
+                //MARIUS
+                var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+                emitter.SetParameter("parameter:/Liquid_Lvl", 0);
+                instance.release();
+                instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                //MARIUS
                 bigUI.SetActive(false);
                 pc.EnableController(true);
+
+                
+
             }
 
             if (Input.GetKey(KeyCode.Space) && Time.time - counter > cooldown)
             {
+                instance.setParameterByName("parameter:/Liquid_Lvl", value);
+                float effectiveRPM = Mathf.Lerp(0, 1, value);
+                var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+                emitter.SetParameter("parameter:/Liquid_Lvl", effectiveRPM);
                 value += fillSpeed * Time.deltaTime;
+                Debug.Log(value);
                 if (value > 1f)
                 {
                     value *= 0.5f;
@@ -82,6 +108,8 @@ public class Heal : LDBrick
                 }
 
                 float y = Unity.Mathematics.math.remap(0f, 1f, min, max, value);
+                
+                
 
                 image.rectTransform.localPosition = Vector3.up * y;
                 image2.rectTransform.localPosition = Vector3.up * y;
