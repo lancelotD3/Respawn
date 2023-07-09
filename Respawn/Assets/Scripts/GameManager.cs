@@ -60,9 +60,7 @@ public class GameManager : MonoBehaviour
                 l.timerCounter -= Time.deltaTime;
                 int timeInt = (int)l.timerCounter;
                 l.ticket.time.text = timeInt.ToString();
-                l.ticket.loadingBar.transform.localPosition = new Vector3(-(l.timerCounter / l.timer) *
-                    l.ticket.loadingBar.rectTransform.rect.width,
-                l.ticket.loadingBar.transform.localPosition.y);
+                l.ticket.SetGFX(l.timerCounter / l.timer);
 
                 if (l.timerCounter <= 0)
                 {

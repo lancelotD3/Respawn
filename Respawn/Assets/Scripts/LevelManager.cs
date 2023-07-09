@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
             FinishLevel();
         }
 
-        
+
 
         string textAdvancement = CheckAdvancement().ToString() + " / " + ldBricks.Count.ToString();
         advancementTMP.text = textAdvancement;
@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
         GameManager.FinishLevel();
         StartCoroutine(FadeThenLoad());
 
-        
+
     }
 
     IEnumerator FadeThenLoad()
@@ -77,11 +77,12 @@ public class LevelManager : MonoBehaviour
         foreach (LDBrick brick in ldBricks)
         {
             //MARIUS
-            
+
             if (brick.bFinished)
                 actualAdvancement++;
-            instance.setParameterByName("Level_comp", ldBricks.Count/actualAdvancement);
 
+            if (actualAdvancement > 0)
+                instance.setParameterByName("Level_comp", ldBricks.Count / actualAdvancement);
         }
 
         if (actualAdvancement == ldBricks.Count)
