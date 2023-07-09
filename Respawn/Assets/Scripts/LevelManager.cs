@@ -42,6 +42,12 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            FinishLevel();
+            
+        }
+        
         var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.SetParameter("Level_comp", comp);
 
@@ -53,8 +59,8 @@ public class LevelManager : MonoBehaviour
     void FinishLevel()
     {
         //MARIUS
-        instance.setParameterByName("Level_comp", 1);
-        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level_comp", 0);
         //MARIUS
         GameManager.FinishLevel();
         StartCoroutine(FadeThenLoad());
@@ -82,6 +88,8 @@ public class LevelManager : MonoBehaviour
                 actualAdvancement++;
             comp = (actualAdvancement / (ldBricks.Count+1));
             instance.setParameterByName("Level_comp", comp);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level_comp", comp);
+
         }
 
         if (actualAdvancement == ldBricks.Count)
