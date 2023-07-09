@@ -1075,7 +1075,7 @@
 	</object>
 	<object class="EventSound" id="{d9480c8e-cabb-481f-9819-513153d6d1ab}">
 		<property name="start">
-			<value>12.705882352941178</value>
+			<value>12.396410118070214</value>
 		</property>
 		<property name="length">
 			<value>2.09375</value>
