@@ -59,6 +59,7 @@ public class Bric : LDBrick
             SetState(BrickState.Full);
         }
     }
+
     public void HitByBelow()
     {
         if (brickState == BrickState.Broken && canUseBlocks)
@@ -66,10 +67,7 @@ public class Bric : LDBrick
             //MARIUS
             FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Brick_break");
             //MARIUS
-<<<<<<< HEAD
-=======
 
->>>>>>> e09502c2019cfb9e47726ec30279db653fee16a3
             SetState(BrickState.Empty);
             canUseBlocks = false;
             StartCoroutine(DelayBrick());
@@ -79,16 +77,12 @@ public class Bric : LDBrick
             //MARIUS
             FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Brick_fissure");
             //MARIUS
-<<<<<<< HEAD
-=======
 
->>>>>>> e09502c2019cfb9e47726ec30279db653fee16a3
             SetState(BrickState.Broken);
             canUseBlocks = false;
             StartCoroutine(DelayBrick());
         }
     }
-   
 
     public void SetState(BrickState state)
     {
