@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/GMTK_FMOD3/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638245096657381540
+  lastModified: 638245187611744451
   FileSizes:
   - Name: Desktop
-    Value: 2845600
+    Value: 3181024
   Exists: 1
 --- !u!114 &-8367327034782971612
 MonoBehaviour:
@@ -176,6 +176,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-6359445830455360553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Snow_level/Transi
+  m_EditorClassIdentifier: 
+  Name: Transi
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 655028834
+    data2: 3778104222
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6081433712674308309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +657,7 @@ MonoBehaviour:
   - {fileID: -8598785554435460435}
   StringsBanks:
   - {fileID: 6123629281906413900}
-  cacheTime: 638245096657465965
+  cacheTime: 638245187611952400
   cacheVersion: 131605
 --- !u!114 &518238640264995308
 MonoBehaviour:
@@ -878,7 +902,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 191
+  Length: 625
 --- !u!114 &3325217412716807692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,6 +1005,7 @@ MonoBehaviour:
   - {fileID: -3487517347880127956}
   - {fileID: -7855852867473361243}
   - {fileID: 3689267293489443868}
+  - {fileID: -6359445830455360553}
   MinDistance: 1
   MaxDistance: 20
   Length: 70588
@@ -1104,10 +1129,10 @@ MonoBehaviour:
   Path: FMOD/GMTK_FMOD3/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638245096657465965
+  lastModified: 638245187611952400
   FileSizes:
   - Name: Desktop
-    Value: 2564
+    Value: 2600
   Exists: 1
 --- !u!114 &7034587183694371456
 MonoBehaviour:

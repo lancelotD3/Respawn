@@ -95,6 +95,9 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		<property name="isPersistent">
 			<value>true</value>
 		</property>
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
 	</object>
 	<object class="MarkerTrack" id="{5cee28ac-4bcf-4bec-8815-b72fa384ff93}" />
 	<object class="GroupTrack" id="{4a8ee77b-36fb-45a8-9894-e27f329d19a5}">
@@ -171,7 +174,6 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 		<property name="length">
 			<value>0.98999999999999999</value>
 		</property>
-		<property name="name" />
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -249,7 +251,7 @@ Recordings by David Nichols of Track Time Audio. Engine is a 1988 Craftsman II 1
 	</object>
 	<object class="SingleSound" id="{2d9be571-d665-4144-9e12-0cc98b097ef5}">
 		<property name="start">
-			<value>0.001</value>
+			<value>0.01</value>
 		</property>
 		<property name="length">
 			<value>0.050000000000000003</value>

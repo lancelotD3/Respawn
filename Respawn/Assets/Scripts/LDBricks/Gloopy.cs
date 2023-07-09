@@ -44,6 +44,7 @@ public class Gloopy : MonoBehaviour
                 speed = -speed;
                 canSwitch = false;
                 StartCoroutine(DelaySwitch());
+                FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/gloopy_damage"); //MARIUS
             }
         }
 
@@ -86,6 +87,7 @@ public class Gloopy : MonoBehaviour
         pc.GetComponent<Rigidbody2D>().AddForce(dir * repulsionForce, ForceMode2D.Impulse);
         pc.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Physics2D.gravity.y * pc.gravityMultiplier, ForceMode2D.Impulse);
         pc.Stun(stunTime);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/gloopy_damage"); //MARIUS
     }
     IEnumerator DelaySwitch()
     {

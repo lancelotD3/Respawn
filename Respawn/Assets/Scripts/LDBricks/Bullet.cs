@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
         {
             Rigidbody2D rb = pc.GetComponent<Rigidbody2D>();
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_damage");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/tower_damage"); //MARIUS
 
             Vector2 dir = (Vector3.right * (collision.transform.position.x - transform.position.x)).normalized;
             rb.velocity = Vector2.zero;

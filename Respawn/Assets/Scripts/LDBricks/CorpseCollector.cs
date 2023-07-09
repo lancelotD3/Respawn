@@ -7,6 +7,7 @@ public class CorpseCollector : LDBrick
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Corpse>(out _))
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Action/heal");
             bFinished = true;
     }
 

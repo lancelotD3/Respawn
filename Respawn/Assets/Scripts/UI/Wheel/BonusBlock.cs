@@ -40,6 +40,8 @@ public class BonusBlock : LDBrick
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/clic_off"); //MARIUS
             mainWheel.GetComponent<MainWheel>().CloseAllWheel();
             mainWheel.SetActive(true);
         }
