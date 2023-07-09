@@ -30,6 +30,7 @@ public class BounceGloopy : MonoBehaviour
         if (!collision.collider.TryGetComponent<PlayerController2D>(out pc))
             return;
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/enemies/gloopy_bounce"); //MARIUS
         Debug.Log("ouaisouaisouais");
         Vector2 dir = (Vector3.right * (collision.transform.position.x - transform.position.x)).normalized;
         dir += Vector2.up * height;
