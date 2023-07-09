@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b8a78877-a8c2-44a2-bb94-335692f09706}">
+		<property name="assetPath">
+			<value>voices/p_sad-006.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.74295833333333339</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{91543cf3-7107-4d30-ab82-4e3a6b15965b}</destination>
+		</relationship>
+	</object>
+</objects>

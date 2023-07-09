@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{19c9ae46-82c1-43d3-9321-7145d41828da}">
+		<property name="assetPath">
+			<value>Loops/Construction/Suga Foot/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{91543cf3-7107-4d30-ab82-4e3a6b15965b}</destination>
+		</relationship>
+	</object>
+</objects>

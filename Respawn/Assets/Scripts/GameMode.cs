@@ -16,7 +16,7 @@ public class Level
     }
 
     public string name;
-    public Texture map;
+    public Sprite map;
     public float timer;
     public float timerCounter = -1f;
     public Ticket ticket;

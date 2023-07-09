@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
-public class Gloopy : LDBrick
+public class Gloopy : MonoBehaviour
 {
     public GameObject leftDetector;
     public GameObject rightDetector;
@@ -35,9 +35,10 @@ public class Gloopy : LDBrick
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
-        RaycastHit2D leftHit = Physics2D.Raycast(leftDetector.transform.position, -Vector2.left);
-        if(leftHit.collider != null && leftHit.distance < 1 && canSwitch)
+        RaycastHit2D leftHit = Physics2D.Raycast(leftDetector.transform.position, Vector2.left);
+        if(leftHit.collider != null && leftHit.distance < .1 && canSwitch)
         {
+            Debug.Log(leftHit.collider.name);
             if (leftHit.collider.gameObject.tag != "Player")
             {
                 speed = -speed;
@@ -46,8 +47,8 @@ public class Gloopy : LDBrick
             }
         }
 
-        RaycastHit2D righttHit = Physics2D.Raycast(leftDetector.transform.position, -Vector2.right);
-        if (righttHit.collider != null && righttHit.distance < 1 && canSwitch)
+        RaycastHit2D righttHit = Physics2D.Raycast(rightDetector.transform.position, Vector2.right);
+        if (righttHit.collider != null && righttHit.distance < .1 && canSwitch)
         {
             if (righttHit.collider.gameObject.tag != "Player")
             {
@@ -58,14 +59,14 @@ public class Gloopy : LDBrick
         }
 
         RaycastHit2D rightAirtHit = Physics2D.Raycast(rightDetectorAir.transform.position, -Vector2.up);
-        if (rightAirtHit.collider == null && canSwitch)
+        if (rightAirtHit.collider != null && canSwitch && rightAirtHit.distance > 3)
         {
             speed = -speed;
             canSwitch = false;
             StartCoroutine(DelaySwitch());
         }
         RaycastHit2D leftAirtHit = Physics2D.Raycast(leftDetectorAir.transform.position, -Vector2.up);
-        if (leftAirtHit.collider == null && canSwitch)
+        if (leftAirtHit.collider != null && canSwitch && leftAirtHit.distance > 3)
         {
             speed = -speed;
             canSwitch = false;
