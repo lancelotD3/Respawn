@@ -10,4 +10,10 @@ public class Buttons : MonoBehaviour
     {
         GameManager.OpenNextLevel();
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Leaving game");
+    }
 }

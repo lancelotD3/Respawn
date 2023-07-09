@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     private void NewLevel(bool haveTutoLevel = false)
     {
         Level newLevel;
-
+        string levelName = gm.playersNames[Random.Range(0, gm.playersNames.Count)];
         if(haveTutoLevel)
         {
             newLevel = new Level(gm.tutoLevel);
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
 
         GameObject newObject = Instantiate(defaultTicketPrefab);
         Ticket newTicket = newObject.GetComponent<Ticket>();
-        newTicket.nickName.text = "test";
+        newTicket.nickName.text = levelName;
         newTicket.time.text = newLevel.timer.ToString();
 
         newTicket.transform.parent = ticketListPanel.transform;
