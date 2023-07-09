@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject primaryCanvas;
     public GameObject defaultTicketPrefab;
 
+    public GameObject playerChair;
+
     public List<Level> idlingLevels = new List<Level>();
 
     int score = 0;
@@ -116,6 +118,7 @@ public class GameManager : MonoBehaviour
     {
         if (instance.idlingLevels.Count > 0)
         {
+            GameObject.Find("PlayerChair").GetComponent<Animator>().Play("StartLevel");
             instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.primaryCanvas.transform;
             EnablePanel(false);
             instance.StartCoroutine(instance.FadeThenLoad());

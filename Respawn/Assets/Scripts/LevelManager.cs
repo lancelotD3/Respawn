@@ -80,7 +80,7 @@ public class LevelManager : MonoBehaviour
             
             if (brick.bFinished)
                 actualAdvancement++;
-            instance.setParameterByName("Level_comp", ldBricks.Count/actualAdvancement);
+            instance.setParameterByName("Level_comp", actualAdvancement/ldBricks.Count);
 
         }
 
