@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DrodroTest.unity
     guid: 4ee089759010a9444959f637c44fee62
   - enabled: 1
-    path: Assets/Scenes/Levels/Theo/Level 1.unity
+    path: Assets/Scenes/Levels/Theo/Level_1.unity
     guid: c06bde3e6a79bb14bb5e4005a3f316fc
   - enabled: 1
     path: Assets/Scenes/Levels/Melanie/01_Tutoriel.unity
@@ -47,4 +47,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Losing.unity
     guid: e084e6dbd83e7354392f34ce1deec50d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_2.unity
+    guid: 3595f73fc9f0989429d0aa9267a9c9c5
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_3.unity
+    guid: 8dd43f800b3b47243a8e4a60f7cde6a6
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_4.unity
+    guid: 6a8807768762d4840a3a2459eebc3f09
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_5.unity
+    guid: 1e82c2024830f2940b50fbfe55a525a5
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_6.unity
+    guid: 4ae32d7b503acbf4a8aa081d3d0faaa6
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_7.unity
+    guid: 24b68f74c0e31004e83ebe73f2289473
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_8.unity
+    guid: 05aa982eada28874896048b6b83d1830
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_9.unity
+    guid: 4b97840d8cac9db4e91b14d4c92f2147
+  - enabled: 1
+    path: Assets/Scenes/Levels/Theo/Level_10.unity
+    guid: a3e03f0c40643b54098ba71b8580fd74
   m_configObjects: {}

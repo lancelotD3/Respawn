@@ -52,22 +52,40 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 30
-      inSlope: -0.11111111
-      outSlope: -0.11111111
+      value: 65
+      inSlope: -0.053882293
+      outSlope: -0.053882293
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 180
-      value: 10
-      inSlope: -0.11111111
-      outSlope: -0.11111111
+      time: 163.83449
+      value: 56.172222
+      inSlope: -0.06714599
+      outSlope: -0.06714599
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 348.2014
+      value: 29.28073
+      inSlope: -0.2618892
+      outSlope: -0.2618892
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1257452
+      outWeight: 0.38442492
+    - serializedVersion: 3
+      time: 450
+      value: 17
+      inSlope: -0.12063749
+      outSlope: -0.12063749
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -76,18 +94,36 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 30
-      inSlope: -0.055555556
-      outSlope: -0.055555556
+      value: 60
+      inSlope: -0.039341547
+      outSlope: -0.039341547
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 180
-      value: 20
-      inSlope: -0.055555556
-      outSlope: -0.055555556
+      time: 191.15828
+      value: 52.479538
+      inSlope: -0.06711708
+      outSlope: -0.06711708
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 340.4106
+      value: 38.316593
+      inSlope: -0.14470297
+      outSlope: -0.14470297
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 450
+      value: 17
+      inSlope: -0.1945133
+      outSlope: -0.1945133
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -100,6 +136,7 @@ MonoBehaviour:
   defaultTicketPrefab: {fileID: 933555938368956303, guid: 9a6c2e9297404b34a958491d3d78a08d, type: 3}
   playerChair: {fileID: 0}
   idlingLevels: []
+  score: 0
 --- !u!1 &3582163890393804119
 GameObject:
   m_ObjectHideFlags: 0
