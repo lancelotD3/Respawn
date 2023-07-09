@@ -98,6 +98,7 @@ MonoBehaviour:
   ticketListPanel: {fileID: 8847859812836416832}
   primaryCanvas: {fileID: 6727145371921014602}
   defaultTicketPrefab: {fileID: 933555938368956303, guid: 9a6c2e9297404b34a958491d3d78a08d, type: 3}
+  playerChair: {fileID: 0}
   idlingLevels: []
 --- !u!1 &3582163890393804119
 GameObject:
@@ -444,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0.5686275}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
