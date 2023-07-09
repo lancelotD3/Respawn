@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     GameMode gm;
     private static GameManager instance;
 
+
+
     public AnimationCurve timeBetweenTicektcurve;
     public AnimationCurve timeForLevelcurve;
 
@@ -118,6 +120,7 @@ public class GameManager : MonoBehaviour
             instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.primaryCanvas.transform;
             EnablePanel(false);
             instance.StartCoroutine(instance.FadeThenLoad(instance.idlingLevels[0].name));
+
         }
     }
 
