@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Melanie/E_07.unity
     guid: f778958fa7f1f5141a9cbf5efa5ccb76
+  - enabled: 1
+    path: Assets/Scenes/Losing.unity
+    guid: e084e6dbd83e7354392f34ce1deec50d
   m_configObjects: {}
