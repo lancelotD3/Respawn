@@ -372,7 +372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
   m_Name: 
@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 803664637}
   - component: {fileID: 803664636}
   - component: {fileID: 803664638}
+  - component: {fileID: 803664639}
   m_Layer: 0
   m_Name: WaitingRoom
   m_TagString: Untagged
@@ -593,6 +594,22 @@ MonoBehaviour:
   Parameter: Transi
   TriggerEvent: 1
   Value: 1
+--- !u!114 &803664639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803664635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Level_comp
+  TriggerEvent: 1
+  Value: 0
 --- !u!1 &809968441
 GameObject:
   m_ObjectHideFlags: 0
