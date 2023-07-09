@@ -16,7 +16,13 @@ public class Bric : LDBrick
 
     private bool canUseBlocks = true;
 
-    private BoxCollider2D boxCollider;
+    [SerializeField]
+    private Sprite textureFull;
+    [SerializeField]
+    private Sprite textureHalf;
+
+    [SerializeField]
+    private GameObject bricCollider;
     private PlayerController2D pc;
     private bool canInteract = false;
 
@@ -27,13 +33,12 @@ public class Bric : LDBrick
 
     private void Awake()
     {
-        boxCollider = GetComponentInChildren<BoxCollider2D>();
         pc = FindObjectOfType<PlayerController2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
             canInteract = true;
     }
 
@@ -47,33 +52,24 @@ public class Bric : LDBrick
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract && !pc.GetIsCarrying())
         {
-            if(brickState == BrickState.Empty)
+            if (brickState == BrickState.Empty)
                 SetState(BrickState.Full);
         }
     }
 
-    private void FixedUpdate()
+    public void HitByBelow()
     {
-        RaycastHit2D bottomHit = Physics2D.Raycast(BottomBrick.transform.position, -Vector2.up / 5);
-        Debug.DrawRay(BottomBrick.transform.position, -Vector2.up / 5, Color.red);
-
-        if (bottomHit.collider != null)
+        if (brickState == BrickState.Broken && canUseBlocks)
         {
-            if (bottomHit.collider.tag == "Player" && bottomHit.distance < .2f)
-            {
-                if (brickState == BrickState.Broken && canUseBlocks)
-                {
-                    SetState(BrickState.Empty);
-                    canUseBlocks = false;
-                    StartCoroutine(DelayBrick());
-                }
-                else if(brickState == BrickState.Full && canUseBlocks)
-                {
-                    SetState(BrickState.Broken);
-                    canUseBlocks = false;
-                    StartCoroutine(DelayBrick());
-                }
-            }
+            SetState(BrickState.Empty);
+            canUseBlocks = false;
+            StartCoroutine(DelayBrick());
+        }
+        else if (brickState == BrickState.Full && canUseBlocks)
+        {
+            SetState(BrickState.Broken);
+            canUseBlocks = false;
+            StartCoroutine(DelayBrick());
         }
     }
 
@@ -82,21 +78,24 @@ public class Bric : LDBrick
         brickState = state;
         Vector4 c = GetComponentInChildren<SpriteRenderer>().color;
 
-        if(brickState == BrickState.Full)
+        if (brickState == BrickState.Full)
         {
+            GetComponentInChildren<SpriteRenderer>().sprite = textureFull;
             GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, 1f);
-            GetComponentInChildren<BoxCollider2D>().enabled = true;
+            bricCollider.GetComponent<BricCollider>().SetTrigger(false);
         }
-        else if(brickState == BrickState.Broken)
+        else if (brickState == BrickState.Broken)
         {
-            GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, .5f);
-            GetComponentInChildren<BoxCollider2D>().enabled = true;
+            GetComponentInChildren<SpriteRenderer>().sprite = textureHalf;
+            //GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, .5f);
+            bricCollider.GetComponent<BricCollider>().SetTrigger(false);
 
         }
-        else if(brickState == BrickState.Empty)
+        else if (brickState == BrickState.Empty)
         {
+            GetComponentInChildren<SpriteRenderer>().sprite = textureFull;
             GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, .2f);
-            GetComponentInChildren<BoxCollider2D>().enabled = false;
+            bricCollider.GetComponent<BricCollider>().SetTrigger(true);
         }
 
         bFinished = brickState == wantedBrickState;
