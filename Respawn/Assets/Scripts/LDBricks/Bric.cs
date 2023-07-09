@@ -53,10 +53,12 @@ public class Bric : LDBrick
         if (Input.GetKeyDown(KeyCode.E) && canInteract && !pc.GetIsCarrying())
         {
             if (brickState == BrickState.Empty)
+            {
                 //MARIUS
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Brick_Placed");
-            //MARIUS
-            SetState(BrickState.Full);
+                //MARIUS
+                SetState(BrickState.Full);
+            }
         }
     }
 

@@ -14,6 +14,7 @@ public class MainWheel : MonoBehaviour
     {
         Debug.Log("ouais");
         CloseAllWheel();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/clic_off"); //MARIUS
         SwordWheel.SetActive(true);
     }
     public void CloseSwordWheel() => SwordWheel.SetActive(false);
@@ -21,6 +22,7 @@ public class MainWheel : MonoBehaviour
     public void OpenShieldWheel()
     {
         CloseAllWheel();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/clic_off"); //MARIUS
         ShieldWheel.SetActive(true);
     }
     public void CloseShieldWheel() => ShieldWheel.SetActive(false);
@@ -28,6 +30,7 @@ public class MainWheel : MonoBehaviour
     public void OpenBootWheel()
     {
         CloseAllWheel();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/clic_off"); //MARIUS
         BootWheel.SetActive(true);
     }
     public void CloseBootWheel() => BootWheel.SetActive(false);
@@ -35,6 +38,7 @@ public class MainWheel : MonoBehaviour
     public void OpenStarWheel()
     {
         CloseAllWheel();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/clic_off"); //MARIUS
         StarWheel.SetActive(true);
     }
     public void CloseStarWheel() => StarWheel.SetActive(false);
@@ -42,12 +46,17 @@ public class MainWheel : MonoBehaviour
     public void OpenHearthWheel()
     {
         CloseAllWheel();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/clic_off"); //MARIUS
         HearthWheel.SetActive(true);
     }
     public void CloseHearthWheel() => HearthWheel.SetActive(false);
 
     public void CloseAllWheel()
     {
+
+
+       
+
         gameObject.SetActive(false);
         CloseBootWheel();
         CloseHearthWheel();
