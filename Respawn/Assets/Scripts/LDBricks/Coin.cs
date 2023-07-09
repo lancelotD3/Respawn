@@ -12,9 +12,17 @@ public class Coin : LDBrick
 
     public void SetState(bool state)
     {
+        //MARIUS
+        if (state != bFinished)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Coin");
+        }
+        //MARIUS
+
         bFinished = state;
         Vector4 c = GetComponentInChildren<SpriteRenderer>().color;
         GetComponentInChildren<SpriteRenderer>().color = new Vector4(c.x, c.y, c.z, state ? 1f : 0.3f);
+        
     }
 }
 
