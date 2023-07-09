@@ -17,8 +17,11 @@ public class TicketInHand : MonoBehaviour
         playerController = FindObjectOfType<PlayerController2D>();
         gm = FindObjectOfType<GameManager>();
 
-        Image image = GetComponent<Image>();
-        image.sprite = gm.idlingLevels[0].map;
+        if(gm != null)
+        {
+            Image image = GetComponent<Image>();
+            image.sprite = gm.idlingLevels[0].map;
+        }
     }
 
     private void Update()

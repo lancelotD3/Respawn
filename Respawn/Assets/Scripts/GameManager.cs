@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NewLevel();
+        NewLevel(true);
     }
 
     private void Update()
@@ -84,16 +84,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void NewLevel()
+    private void NewLevel(bool haveTutoLevel = false)
     {
-        int levelid = Random.Range(0, gm.playableLevels.Count);
-        Level newLevel = new Level(gm.playableLevels[levelid]);
+        Level newLevel;
+        string levelName = gm.playersNames[Random.Range(0, gm.playersNames.Count)];
+        if(haveTutoLevel)
+        {
+            newLevel = new Level(gm.tutoLevel);
+        }
+        else
+        {
+            int levelid = Random.Range(0, gm.playableLevels.Count);
+            newLevel = new Level(gm.playableLevels[levelid]);
+        }
         newLevel.timer = timeForLevelcurve.Evaluate(timeLevel);
         newLevel.timerCounter = newLevel.timer;
 
         GameObject newObject = Instantiate(defaultTicketPrefab);
         Ticket newTicket = newObject.GetComponent<Ticket>();
-        newTicket.nickName.text = "test";
+        newTicket.nickName.text = levelName;
         newTicket.time.text = newLevel.timer.ToString();
 
         newTicket.transform.parent = ticketListPanel.transform;

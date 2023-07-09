@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class Level
 {
-    Level() { }
+    public Level() { }
     public Level(Level level) 
     {
         name = level.name;
@@ -26,6 +26,8 @@ public class GameMode : MonoBehaviour
 {
     private static GameMode instance;
     public List<Level> playableLevels;
+    public Level tutoLevel;
+    public List<string> playersNames;
 
     private void Awake()
     {
