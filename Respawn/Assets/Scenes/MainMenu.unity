@@ -817,7 +817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.size
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[0].map
@@ -826,62 +826,22 @@ PrefabInstance:
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[1].map
       value: 
-      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
+      objectReference: {fileID: 21300000, guid: d895cf989b344ce48a5bc3dfb699b236, type: 3}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[2].map
       value: 
       objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[3].map
-      value: 
-      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[4].map
-      value: 
-      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[5].map
-      value: 
-      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[6].map
-      value: 
-      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[7].map
-      value: 
-      objectReference: {fileID: 21300000, guid: ad66d0be5bf5f994ea31914b230020ad, type: 3}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[0].name
-      value: 01_Tutoriel
+      value: DrodroTest
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[1].name
-      value: E_01
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[2].name
-      value: E_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[3].name
-      value: E_03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[4].name
-      value: E_04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[5].name
-      value: E_05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[6].name
-      value: E_06
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[7].name
-      value: E_07
+      value: zoo
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[0].timer
@@ -893,27 +853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: playableLevels.Array.data[2].timer
-      value: 60000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[3].timer
-      value: 60000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[4].timer
-      value: 60000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[5].timer
-      value: 60000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[6].timer
-      value: 60000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754629542247480662, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
-      propertyPath: playableLevels.Array.data[7].timer
-      value: 60000
+      value: 6000000
       objectReference: {fileID: 0}
     - target: {fileID: 8901814664529526468, guid: 99b2b744dd311284e9ee5ac7c93a0761, type: 3}
       propertyPath: m_RootOrder

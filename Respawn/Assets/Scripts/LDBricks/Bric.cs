@@ -48,7 +48,10 @@ public class Bric : LDBrick
         if (Input.GetKeyDown(KeyCode.E) && canInteract && !pc.GetIsCarrying())
         {
             if(brickState == BrickState.Empty)
-                SetState(BrickState.Full);
+                    //MARIUS
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Brick_Placed");
+                    //MARIUS
+            SetState(BrickState.Full);
         }
     }
 
@@ -63,12 +66,18 @@ public class Bric : LDBrick
             {
                 if (brickState == BrickState.Broken && canUseBlocks)
                 {
+                    //MARIUS
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Brick_break");
+                    //MARIUS
                     SetState(BrickState.Empty);
                     canUseBlocks = false;
                     StartCoroutine(DelayBrick());
                 }
                 else if(brickState == BrickState.Full && canUseBlocks)
                 {
+                    //MARIUS
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Props/Brick_fissure");
+                    //MARIUS
                     SetState(BrickState.Broken);
                     canUseBlocks = false;
                     StartCoroutine(DelayBrick());
