@@ -42,6 +42,9 @@ public class BloodStain : LDBrick
         {
             pc.StartSwipe();
             pc.rightSwipe = !pc.rightSwipe;
+            //MARIUS
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Action/wipe");
+            //MARIUS
 
             --actualStain;
             sprite.color = new Vector4(sprite.color.r,
@@ -51,6 +54,7 @@ public class BloodStain : LDBrick
 
             if (actualStain <= 0)
                 bFinished = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event/Chara/happy");
         }
     }
 }

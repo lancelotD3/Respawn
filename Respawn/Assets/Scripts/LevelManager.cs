@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using static UnityEngine.Rendering.DebugUI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     TMP_Text advancementTMP;
     bool levelFinished = false;
+    private FMOD.Studio.EventInstance instance;
     private void Awake()
     {
         advancementTMP = GetComponentInChildren<TMP_Text>();
@@ -20,6 +22,10 @@ public class LevelManager : MonoBehaviour
         }
 
         Debug.Log(ldBricks.Count);
+        //MARIUS
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/music/Snow_level");
+        instance.start();
+        //MARIUS
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,14 +43,21 @@ public class LevelManager : MonoBehaviour
             FinishLevel();
         }
 
+        
+
         string textAdvancement = CheckAdvancement().ToString() + " / " + ldBricks.Count.ToString();
         advancementTMP.text = textAdvancement;
     }
 
     void FinishLevel()
     {
+        //MARIUS
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //MARIUS
         GameManager.FinishLevel();
         StartCoroutine(FadeThenLoad());
+
+        
     }
 
     IEnumerator FadeThenLoad()
@@ -63,8 +76,12 @@ public class LevelManager : MonoBehaviour
         int actualAdvancement = 0;
         foreach (LDBrick brick in ldBricks)
         {
+            //MARIUS
+            
             if (brick.bFinished)
                 actualAdvancement++;
+            instance.setParameterByName("Level_comp", actualAdvancement/ldBricks.Count);
+
         }
 
         if (actualAdvancement == ldBricks.Count)

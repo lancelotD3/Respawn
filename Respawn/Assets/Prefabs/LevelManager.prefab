@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4043417804602797331}
   - component: {fileID: 5575881611834791027}
   - component: {fileID: 7113912630835397047}
+  - component: {fileID: 6067882953010024265}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -47,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcce8fcd07fe934783ed493d61cda92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
 --- !u!61 &5575881611834791027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95,6 +95,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6067882953010024265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587986413492741277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2137892863
+      Data2: 1109237520
+      Data3: 274639775
+      Data4: -938881789
+    Path: event:/Music/Snow_level
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: Level_comp
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3480725963989091166
 GameObject:
   m_ObjectHideFlags: 0

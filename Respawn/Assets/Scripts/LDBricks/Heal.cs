@@ -47,6 +47,9 @@ public class Heal : LDBrick
         }
     }
 
+    public float min = 0f;
+    public float max = 1f;
+
     private void Update()
     {
         bFinished = value >= finishedThreshold && value <= 1f;
@@ -77,8 +80,11 @@ public class Heal : LDBrick
                     value *= 0.5f;
                     counter = Time.time;
                 }
-                image.rectTransform.localPosition = Vector3.up * (-1f + value);
-                image2.rectTransform.localPosition = Vector3.up * (-1f + value);
+
+                float y = Unity.Mathematics.math.remap(0f, 1f, min, max, value);
+
+                image.rectTransform.localPosition = Vector3.up * y;
+                image2.rectTransform.localPosition = Vector3.up * y;
             }
         }
     }
