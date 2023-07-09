@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{31ff8d3f-64c1-4bec-80f1-4d63a283dc5e}">
+		<property name="assetPath">
+			<value>action/wipe/wipe_meca-002.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.37333333333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{91543cf3-7107-4d30-ab82-4e3a6b15965b}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f4629ccc-e310-4ddb-abcf-fee8f0d3d884}">
+		<property name="assetPath">
+			<value>Interactables/Coin/coin_8bit-004.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0834166666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{91543cf3-7107-4d30-ab82-4e3a6b15965b}</destination>
+		</relationship>
+	</object>
+</objects>

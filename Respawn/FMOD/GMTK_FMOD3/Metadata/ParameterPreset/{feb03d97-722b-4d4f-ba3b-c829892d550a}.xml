@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{feb03d97-722b-4d4f-ba3b-c829892d550a}">
+		<property name="name">
+			<value>Liquid_Lvl</value>
+		</property>
+		<relationship name="folder">
+			<destination>{73f09380-fa62-4c36-a88c-f5ad3c7d28d3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{44979939-ace5-4715-89bd-67d88ba8b92f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{44979939-ace5-4715-89bd-67d88ba8b92f}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
