@@ -45,6 +45,9 @@ public class Shooter : MonoBehaviour
 
             GameObject bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position;
+            bullet.transform.rotation = Quaternion.Euler(0, 0, 45);
+            //bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Cos(Vector2.Dot(gameObject.transform.position, target.transform.position)));
+
             bullet.GetComponent<Bullet>().GetComponent<Rigidbody2D>().AddForce((target.transform.position -
                 transform.position).normalized * bulletSpeed);
             shootTime = Time.time;
