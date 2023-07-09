@@ -12,5 +12,6 @@ public class Corpse : MonoBehaviour
     private void Update()
     {
         portable.enabled = bloodStain.bFinished;
+        FMODUnity.RuntimeManager.PlayOneShot("event/Chara/happy");
     }
 }

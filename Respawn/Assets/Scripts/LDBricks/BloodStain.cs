@@ -54,6 +54,7 @@ public class BloodStain : LDBrick
 
             if (actualStain <= 0)
                 bFinished = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event/Chara/happy");
         }
     }
 }
