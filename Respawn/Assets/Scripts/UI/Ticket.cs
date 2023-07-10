@@ -12,6 +12,12 @@ public class Ticket : MonoBehaviour
     public float min = 0f;
     public float max = 1f;
 
+
+    private void Start()
+    {
+        transform.localScale = Vector3.one * 0.21f;
+    }
+
     public void SetGFX(float percentage)
     {
         float x = Unity.Mathematics.math.remap(0f, 1f, min, max, percentage);
