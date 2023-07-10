@@ -881,7 +881,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1111383919
 RectTransform:
@@ -1063,6 +1063,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6656331677360755171, guid: a712b724c118e8a4b923bad4f2c5fa2a, type: 3}
       propertyPath: ticketOpen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656331677553914204, guid: a712b724c118e8a4b923bad4f2c5fa2a, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6656331677553914205, guid: a712b724c118e8a4b923bad4f2c5fa2a, type: 3}

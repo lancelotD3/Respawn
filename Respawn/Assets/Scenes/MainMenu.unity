@@ -939,7 +939,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &930788961
 RectTransform:
@@ -970,6 +970,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3032478623933026237, guid: 51f2a41f4b93238428676cd02f723a9c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196566407402515520, guid: 51f2a41f4b93238428676cd02f723a9c, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7255092394206082643, guid: 51f2a41f4b93238428676cd02f723a9c, type: 3}
       propertyPath: m_Name
       value: FadeInFadeOut
@@ -1095,6 +1103,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6656331677553914204, guid: a712b724c118e8a4b923bad4f2c5fa2a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6656331677553914205, guid: a712b724c118e8a4b923bad4f2c5fa2a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
