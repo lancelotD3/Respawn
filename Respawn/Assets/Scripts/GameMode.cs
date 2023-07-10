@@ -56,6 +56,14 @@ public class GameMode : MonoBehaviour
 
     private void LateUpdate()
     {
+        bool ctrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        if (ctrl && Input.GetKeyDown(KeyCode.W))
+        {
+            float ratio = 16f / 9f;
+            float height = Screen.width / ratio;
+            Screen.SetResolution(Screen.width, (int)height, false);
+        }
+
         if (!resizableWindow)
             return;
 

@@ -91,7 +91,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        bool ctrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        if (ctrl && Input.GetKeyDown(KeyCode.F))
         {
             NewLevel();
         }

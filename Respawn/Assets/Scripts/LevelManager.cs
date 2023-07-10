@@ -42,11 +42,9 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
+        bool ctrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        if (ctrl && Input.GetKeyDown(KeyCode.G))
             FinishLevel();
-            
-        }
         
         var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.SetParameter("Level_comp", comp);
