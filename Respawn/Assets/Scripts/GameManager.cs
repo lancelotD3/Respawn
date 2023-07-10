@@ -171,5 +171,5 @@ public class GameManager : MonoBehaviour
         Destroy(instance.primaryCanvas.transform.GetChild(0).gameObject);
     }
 
-    public void FinishGame() => Destroy(gameObject);
+    public static void FinishGame() => Destroy(instance.gameObject);
 }

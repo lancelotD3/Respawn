@@ -44,4 +44,144 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c11815ffefa5f4aa525a1336fbab06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playableLevels: []
+  playableLevels:
+  - name: Level_1
+    map: {fileID: 21300000, guid: 7c9dc73314928f2459546db854dc1ccf, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_2
+    map: {fileID: 21300000, guid: fca770017fafa8744be59ed7add22eb5, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_3
+    map: {fileID: 21300000, guid: 85580dd524058764ebc30d6a46ccf0a3, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_4
+    map: {fileID: 21300000, guid: d73121ffc62bbd64ea790b72aecfebea, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_5
+    map: {fileID: 21300000, guid: bb548d53e29bcc3458673dd8d3f87607, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_6
+    map: {fileID: 21300000, guid: 590eef19588a7e14bb7603741fa1d1df, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_7
+    map: {fileID: 21300000, guid: 987f68534767a8946b732badd576eb73, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_8
+    map: {fileID: 21300000, guid: 55b957cc9eeb1ed4db0dc85866b783e9, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_9
+    map: {fileID: 21300000, guid: 8b681314470dd394f96782d35fb7e8f4, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_10
+    map: {fileID: 21300000, guid: 15b98286a2052204db86304730836f6b, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_11
+    map: {fileID: 21300000, guid: d6c31f892e560dc409adc692b6e29f76, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_12
+    map: {fileID: 21300000, guid: 47c509e0240007b45ac860d1cf7c0257, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_13
+    map: {fileID: 21300000, guid: 6a8e0335d9971ec41b4a2ed8296dee33, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_14
+    map: {fileID: 21300000, guid: ee0ce1abee91a3a4f998e44595d40b60, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_15
+    map: {fileID: 21300000, guid: 8adf1de53a5371546b3ae3f007ce7b4a, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_16
+    map: {fileID: 21300000, guid: ef2969565b3130843801643e12a3db62, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_17
+    map: {fileID: 21300000, guid: 98ef35046921e7146aaa26a749a959cb, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  - name: Level_18
+    map: {fileID: 21300000, guid: 98ef35046921e7146aaa26a749a959cb, type: 3}
+    timer: 60000
+    timerCounter: 0
+    ticket: {fileID: 0}
+  tutoLevel:
+    name: Level_0
+    map: {fileID: 21300000, guid: 0b883ae04d9a6624dbd50cc3beb67fbe, type: 3}
+    timer: 0
+    timerCounter: -1
+    ticket: {fileID: 0}
+  playersNames:
+  - PolsKRatatoR
+  - Dreauxis
+  - THEjoueuse
+  - Hory
+  - PuPurin
+  - Shirazel
+  - Ninno
+  - Downofthefairies
+  - angieuh
+  - Helief
+  - Xx_DarkNinja_xX
+  - Naomims
+  - Zalamar
+  - Riffeeze
+  - Melanight
+  - Jay
+  - Pucepage
+  - Aplaty
+  - Vin's
+  - Xtri
+  - Eltrololol268
+  - Soleil
+  - Pepefelipe
+  - maskojun
+  - Greeface
+  - Graface
+  - 'Grufusse '
+  - Griface
+  - Groface
+  - Greg
+  - Bassem
+  - fantasia_shopper
+  - jules_le_redoutable
+  - Louis_L'_imperturbable
+  - "T\xE9ho"
+  - GMTK
+  - Lou
+  - RIP_Silksong
+  - 'L_autre_Lou '
+  - Le_Farfadet
+  - benis_musik
+  - Hyppocampe_Fou
+  - "Gid\xE9on1"
