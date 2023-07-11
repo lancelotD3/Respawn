@@ -37,6 +37,8 @@ public class GameMode : MonoBehaviour
     public Level tutoLevel;
     public List<string> playersNames;
 
+    [SerializeField]
+    private bool resizableWindow = false;
 
     private void Awake()
     {
@@ -50,6 +52,27 @@ public class GameMode : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
 
+    }
+
+    private void LateUpdate()
+    {
+        bool ctrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        if (ctrl && Input.GetKeyDown(KeyCode.W))
+        {
+            float ratio = 16f / 9f;
+            float height = Screen.width / ratio;
+            Screen.SetResolution(Screen.width, (int)height, false);
+        }
+
+        if (!resizableWindow)
+            return;
+
+        if (Screen.fullScreenMode == FullScreenMode.Windowed)
+        {
+            float ratio = 16f / 9f;
+            float height = Screen.width / ratio;
+            Screen.SetResolution(Screen.width, (int)height, false);
+        }
     }
 
     public static void PlayButton()

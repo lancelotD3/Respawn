@@ -35,4 +35,9 @@ public class FadeInFadeOut : MonoBehaviour
         a.enabled = true;
         a.Play("FadeOut");
     }
+
+    public static void Destroy()
+    {
+        Destroy(instance.gameObject);
+    }
 }

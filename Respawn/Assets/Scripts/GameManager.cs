@@ -91,7 +91,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        bool ctrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        if (ctrl && Input.GetKeyDown(KeyCode.F))
         {
             NewLevel();
         }
@@ -130,10 +131,15 @@ public class GameManager : MonoBehaviour
         if (instance.idlingLevels.Count > 0)
         {
             GameObject.Find("PlayerChair").GetComponent<Animator>().Play("StartLevel");
-            instance.ticketListPanel.transform.GetChild(0).transform.parent = instance.primaryCanvas.transform;
+
+            GameObject ticket = instance.ticketListPanel.transform.GetChild(0).gameObject;
+            Transform oldTRS = ticket.transform;
+            ticket.transform.parent = instance.primaryCanvas.transform;
+            ticket.transform.position = oldTRS.position;
+            ticket.transform.localScale = oldTRS.localScale;
+
             EnablePanel(false);
             instance.StartCoroutine(instance.FadeThenLoad(instance.idlingLevels[0].name));
-
         }
     }
 
@@ -171,5 +177,5 @@ public class GameManager : MonoBehaviour
         Destroy(instance.primaryCanvas.transform.GetChild(0).gameObject);
     }
 
-    public void FinishGame() => Destroy(gameObject);
+    public static void FinishGame() => Destroy(instance.gameObject);
 }

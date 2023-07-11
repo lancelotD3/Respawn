@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000091552734, y: -219}
+  m_AnchoredPosition: {x: 0, y: -219}
   m_SizeDelta: {x: 3839.9998, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6656331677360755102
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5d6ca8aacd35346b1dd1405471b53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ticketOpen: 1
 --- !u!1 &6656331677553914273
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &6656331677553914275
 MonoBehaviour:

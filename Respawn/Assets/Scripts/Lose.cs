@@ -28,7 +28,8 @@ public class Lose : MonoBehaviour
     }
     IEnumerator CloseGame()
     {
-        gm.FinishGame();
+        GameManager.FinishGame();
+        FadeInFadeOut.Destroy();
         yield return new WaitForSeconds(60f);
         SceneManager.LoadScene("MainMenu");
     }
@@ -36,7 +37,7 @@ public class Lose : MonoBehaviour
     public void Leave()
     {
         SceneManager.LoadScene("MainMenu");
-        gm.FinishGame();
+        //GameManager.FinishGame();
     }
 
 

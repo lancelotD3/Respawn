@@ -81,7 +81,7 @@ public class Portable : MonoBehaviour
 
         transform.parent = null;
         bPickedUp = false;
-        bCanInteract = false;
+        bCanInteract = true;
 
         GetComponent<Rigidbody2D>().AddForce((pc.lastInputVelocity.normalized +
             Vector2.up * verticalForce) * launchForce + pc.GetComponent<Rigidbody2D>().velocity,
