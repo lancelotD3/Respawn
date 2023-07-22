@@ -178,4 +178,12 @@ public class GameManager : MonoBehaviour
     }
 
     public static void FinishGame() => Destroy(instance.gameObject);
+
+    public static bool IsIdlingLevelsEmpty()
+    {
+        if (instance.idlingLevels.Count == 0)
+            return true;
+        return false;
+    }
+
 }
