@@ -696,6 +696,158 @@ PrefabInstance:
       propertyPath: playerChair
       value: 
       objectReference: {fileID: 1065924297}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[0].time
+      value: -0.31215286
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[1].time
+      value: 7.703596
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[2].time
+      value: 13.207972
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].time
+      value: 163.83449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].time
+      value: 348.2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].time
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[0].value
+      value: 29.904968
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[1].value
+      value: 30.15078
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[2].value
+      value: 61.205776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].value
+      value: 56.172222
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].value
+      value: 29.28073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].value
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[0].inSlope
+      value: 0.030666063
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[1].inSlope
+      value: 0.0830265
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[2].inSlope
+      value: -0.024733908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].inSlope
+      value: -0.06714599
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].inSlope
+      value: -0.2618892
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].inSlope
+      value: -0.12063749
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[0].outSlope
+      value: 0.030666063
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[1].inWeight
+      value: 0.5681268
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[1].outSlope
+      value: 0.0830265
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[2].inWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[2].outSlope
+      value: -0.024733908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].outSlope
+      value: -0.06714599
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].inWeight
+      value: 0.1257452
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].outSlope
+      value: -0.2618892
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].outSlope
+      value: -0.12063749
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[2].outWeight
+      value: 0.07159831
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].outWeight
+      value: 0.38442492
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[3].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[4].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727823447220317482, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
+      propertyPath: timeBetweenTicektcurve.m_Curve.Array.data[5].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a8a247ad143fb4798987b6902eb1d1, type: 3}
 --- !u!1 &1065924297
